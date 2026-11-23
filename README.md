@@ -4,7 +4,9 @@ Versión de trabajo del 23 de noviembre de 2026. Edward, Natalia y Elías prepar
 
 ## Cómo empezar a trabajar
 
-Todos los agentes leen primero [AGENTS.md](AGENTS.md) y la [bitácora](BITACORA.md). Si conectas un agente externo, incluye esta instrucción en su configuración inicial. «Antes de editar este repositorio, lee y sigue el AGENTS.md de la raíz de `main`». Las entradas de la bitácora enlazan las propuestas con su revisión en GitHub.
+**¿Quieres avanzar?** Elige una [tarea del tablero](https://github.com/users/jarvis-ops69/projects/2) o empieza por [D17 · Inversión](https://app.notion.com/p/4214f31adda381c2a079fc04ac35fbb0). El agente abre la ficha, te explica el recorrido, te pregunta cómo quieres resolver la tarea y guarda tus decisiones en Notion. Cuando pidas preparar la lámina, recibirás una vista previa en una PR. [Roadmap de las 18 láminas](presentacion/ROADMAP.md).
+
+Todos los agentes leen primero [AGENTS.md](AGENTS.md) y la [bitácora](BITACORA.md). Si conectas un agente externo, incluye esta instrucción en su configuración inicial. «Al iniciar o retomar una tarea, lee y aplica AGENTS.md del main vigente y explica el proceso a la persona en tu primera respuesta». Las entradas de la bitácora enlazan las propuestas con su revisión en GitHub.
 
 ## Documentos de trabajo
 

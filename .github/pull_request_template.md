@@ -1,15 +1,15 @@
-## Qué cambió y por qué
+## Tarea, diapositiva y ficha de Notion
 
-<!-- Identifica el frente, los archivos o láminas y el efecto del cambio. -->
+<!-- Enlaza el issue, indica Dxx, la ficha y el responsable. Para tareas de equipo, anota las láminas afectadas. -->
 
-## Dónde revisarlo
+## Cambio y decisión de la persona responsable
 
-<!-- Enlaza el material y la entrada de BITACORA.md. Indica si otro frente debe revisar algo concreto. -->
+<!-- Indica el cambio y qué decisión o fuente lo respalda. -->
 
-## Qué comprobé
+## Verificación, vista previa y bitácora
 
-<!-- Anota la comprobación y el resultado. Para cifras, incluye fuente, período y supuestos. -->
+<!-- Enlaza el HTML, la entrada de BITACORA.md y la prueba realizada. -->
 
-## Qué debe decidir Edward
+## Pendiente y decisión para Edward
 
-<!-- Formula la decisión pendiente e indica si la PR está lista para que Edward la integre. -->
+<!-- Explica qué necesita revisar y si la entrega ya se puede integrar. -->

@@ -1,0 +1,25 @@
+name: Vista de la presentación
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  vista:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar Pandoc
+        run: sudo apt-get update -qq && sudo apt-get install -y pandoc
+      - name: Generar las diapositivas
+        run: python3 presentacion/generar.py
+      - name: Guardar la vista para revisión
+        uses: actions/upload-artifact@v4
+        with:
+          name: presentacion-html
+          path: |
+            presentacion/index.html
+            presentacion/recursos/
