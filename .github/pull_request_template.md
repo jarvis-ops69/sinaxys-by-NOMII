@@ -1,6 +1,6 @@
 ## Tarea, diapositiva y ficha de Notion
 
-<!-- Enlaza el issue, indica Dxx, la ficha y el responsable. Para tareas de equipo, anota las láminas afectadas. -->
+<!-- Enlaza el issue, indica el código S o el frente D, la ficha y el responsable. Para tareas de equipo, anota las láminas afectadas. -->
 
 ## Cambio y decisión de la persona responsable
 
@@ -8,7 +8,7 @@
 
 ## Verificación, vista previa y bitácora
 
-<!-- Enlaza el HTML, la entrada de BITACORA.md y la prueba realizada. -->
+<!-- Enlaza el HTML individual y el general, la entrada de BITACORA.md y la prueba realizada. -->
 
 ## Pendiente y decisión para Edward
 

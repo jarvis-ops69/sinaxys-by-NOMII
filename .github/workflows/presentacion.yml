@@ -22,4 +22,5 @@ jobs:
           name: presentacion-html
           path: |
             presentacion/index.html
+            presentacion/html/
             presentacion/recursos/

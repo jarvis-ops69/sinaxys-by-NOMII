@@ -1,68 +1,393 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Presentación Sinaxys Brasil · Método ZAI by NOMII</title>
-  <style>
-    :root { color-scheme: light; font-family: Inter, system-ui, sans-serif; color: #192f35; background: #edf2ef; }
-    * { box-sizing: border-box; }
-    body { margin: 0; }
-    header, main { max-width: 1060px; margin: auto; padding: 1.5rem clamp(1rem, 4vw, 3rem); }
-    header { padding-bottom: 0; }
-    h1,h2 { letter-spacing: -.04em; line-height: 1.08; }
-    h1 { font-size: clamp(1.8rem, 4vw, 3rem); margin: .7em 0; }
-    h2 { font-size: clamp(1.7rem, 4vw, 3.5rem); margin: .25em 0 .65em; }
-    summary, a { color: #075a4f; cursor: pointer; }
-    nav ol { columns: 2 17rem; padding-inline-start: 1.5rem; line-height: 1.7; }
-    section { background: white; border-top: 4px solid #22786e; padding: clamp(1.5rem, 5vw, 4rem); margin: 1.4rem 0; min-height: clamp(15rem, 40vw, 31rem); border-radius: .35rem; overflow-wrap: anywhere; }
-    section p, section li, section td, section th { line-height: 1.5; }
-    .code { color: #35645d; font-weight: 700; margin: 0; }
-    .pending { color: #586962; }
-    table { border-collapse: collapse; max-width: 100%; }
-    td, th { padding: .5em; border-bottom: 1px solid #becdc8; text-align: start; }
-    img { max-width: 100%; height: auto; }
-    @media print { header { display: none; } body { background: white; } main { max-width: none; padding: 0; } section { break-before: page; margin: 0; min-height: auto; } section:first-child { break-before: auto; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presentación Sinaxys Brasil</title>
+<style>
+:root{color-scheme:light;--ink:#152f34;--accent:#12665e;--rule:#cedad2;--paper:#fcfbf6;font:16px/1.55 "Inter",system-ui,sans-serif;color:var(--ink);background:#e9eee9}
+*{box-sizing:border-box}
+body{margin:0}header,main{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+header{padding:2rem 0 1rem}h1,h2,h3,p{margin-top:0}
+h1,h2,.wordmark{letter-spacing:-.045em}h1{font-size:clamp(1.8rem,4vw,3.4rem);line-height:1.05;margin:.3em 0}
+a,summary{color:var(--accent)}a:focus-visible,summary:focus-visible,.table-scroll:focus-visible{outline:3px solid #c76839;outline-offset:3px}
+summary{cursor:pointer;width:fit-content}header ol{columns:2 22rem;padding-left:1.5rem}header li{padding:.18rem;break-inside:avoid}header li span{font-weight:700}
+.wordmark,.slide-id,.eyebrow{font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;font-weight:750}
+.wordmark{margin:0;color:var(--accent)}.slide{background:var(--paper);border-top:5px solid var(--accent);margin:.7rem 0 0;padding:clamp(1.25rem,5vw,3.6rem);min-height:min(56vw,37rem);display:flex;flex-direction:column;scroll-margin-top:.8rem;overflow-wrap:anywhere}
+.slide-id{color:var(--accent);border-bottom:1px solid var(--rule);padding-bottom:.8rem;margin-bottom:clamp(1.2rem,3vw,2.3rem)}
+.eyebrow{color:var(--accent);margin-bottom:.65rem}
+h2{font-family:"Source Sans 3","Inter",system-ui,sans-serif;font-size:clamp(1.95rem,4.5vw,3.5rem);line-height:1.04;font-weight:690;max-width:28ch;margin:0 0 .4em;text-wrap:balance}
+.editorial>p{max-width:78ch}.editorial>p:first-of-type:not(.eyebrow){font-size:1.12rem}
+.dark{background:#153d40;color:#faf7eb;border-top-color:#9ac6ab}.dark .slide-id,.dark .eyebrow{color:#b4dac0}.dark .slide-id{border-color:#527174}.dark .editorial{margin:auto 0}.dark h2{font-size:clamp(2.4rem,6vw,5rem);max-width:22ch}.dark .editorial>p{max-width:54ch}
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr));gap:.9rem;margin:1.3rem 0}
+.panel{border-top:2px solid #7a9d86;background:#f0f3eb;padding:1rem 1.1rem}.panel h3{font-size:1.04rem;line-height:1.25;margin-bottom:.7rem}.panel p,.panel li{font-size:.96rem}.panel>*:last-child{margin-bottom:0}
+ul,ol{padding-left:1.35rem}li+li{margin-top:.22rem}blockquote{border-left:3px solid #95b299;background:#edf3ed;margin:1rem 0;padding:.65rem 1rem}blockquote p{margin:.25rem 0}
+.table-scroll{max-width:100%;overflow:auto;margin:1rem 0}table{border-collapse:collapse;width:100%;text-align:left}th,td{padding:.58rem .7rem;border-bottom:1px solid var(--rule);vertical-align:top}th{color:#f8f9f1;background:#265b55}tbody tr:nth-child(even){background:#eff2eb}img{max-width:100%;height:auto}
+.paging{display:flex;justify-content:flex-end;gap:1.1rem;margin:.5rem 0 1.8rem;font-size:.88rem}.paging a{text-decoration:underline;text-underline-offset:.2em}
+@media(max-width:600px){main,header{width:calc(100% - 1rem)}.slide{min-height:60vh}.table-scroll table{min-width:28rem}.panels{grid-template-columns:1fr}}
+@media print{@page{size:A4 landscape;margin:10mm}header,.paging{display:none}main{width:100%}body{background:white}.slide{break-before:page;margin:0;padding:8mm;min-height:0;print-color-adjust:exact}.slide:first-child{break-before:auto}.slide-id{margin-bottom:.6rem}.slide h2{font-size:24pt}.panels{margin:.5rem 0}.table-scroll{overflow:visible}}
+</style>
 </head>
-<body>
-  <header><h1>Sinaxys Brasil · Método ZAI by NOMII</h1>
-    <details><summary>Índice de la presentación</summary><nav aria-label="Diapositivas"><ol><li><a href="#D01">D01 · Lanzamiento</a></li>
-<li><a href="#D02">D02 · Manual de marca</a></li>
-<li><a href="#D03">D03 · Público en Brasil</a></li>
-<li><a href="#D04">D04 · Instagram</a></li>
-<li><a href="#D05">D05 · Facebook</a></li>
-<li><a href="#D06">D06 · YouTube</a></li>
-<li><a href="#D07">D07 · TikTok</a></li>
-<li><a href="#D08">D08 · Landing</a></li>
-<li><a href="#D09">D09 · Email</a></li>
-<li><a href="#D10">D10 · Meta Ads</a></li>
-<li><a href="#D11">D11 · Momentos de decisión</a></li>
-<li><a href="#D12">D12 · Postulación</a></li>
-<li><a href="#D13">D13 · Selección y nutrición</a></li>
-<li><a href="#D14">D14 · Traspaso a ventas</a></li>
-<li><a href="#D15">D15 · Medición</a></li>
-<li><a href="#D16">D16 · Calendario</a></li>
-<li><a href="#D17">D17 · Inversión</a></li>
-<li><a href="#D18">D18 · Operación y decisiones</a></li></ol></nav></details>
-  </header>
-  <main><section id="D01"><p class="code">D01</p><h2>Lanzamiento</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D02"><p class="code">D02</p><h2>Manual de marca</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D03"><p class="code">D03</p><h2>Público en Brasil</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D04"><p class="code">D04</p><h2>Instagram</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D05"><p class="code">D05</p><h2>Facebook</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D06"><p class="code">D06</p><h2>YouTube</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D07"><p class="code">D07</p><h2>TikTok</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D08"><p class="code">D08</p><h2>Landing</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D09"><p class="code">D09</p><h2>Email</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D10"><p class="code">D10</p><h2>Meta Ads</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D11"><p class="code">D11</p><h2>Momentos de decisión</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D12"><p class="code">D12</p><h2>Postulación</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D13"><p class="code">D13</p><h2>Selección y nutrición</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D14"><p class="code">D14</p><h2>Traspaso a ventas</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D15"><p class="code">D15</p><h2>Medición</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D16"><p class="code">D16</p><h2>Calendario</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D17"><p class="code">D17</p><h2>Inversión</h2><p class="pending">Pendiente de contenido</p></section>
-<section id="D18"><p class="code">D18</p><h2>Operación y decisiones</h2><p class="pending">Pendiente de contenido</p></section></main>
-</body>
+<body><header id="indice"><p class="wordmark">Sinaxys × NOMII</p><h1>Presentación de la alianza en Brasil</h1><details><summary>Índice de diapositivas</summary><nav aria-label="Índice"><ol><li><a href="#S01"><span>Slide 1</span> Portada</a></li><li><a href="#S02"><span>Slide 2</span> Un camino claro permite imaginarse ahí.</a></li><li><a href="#S03"><span>Slide 3</span> El crecimiento empieza con decisiones.</a></li><li><a href="#S04"><span>Slide 4</span> Una nueva etapa. Un camino más claro.</a></li><li><a href="#S05"><span>Slide 5</span> La alianza empieza con una conversación.</a></li><li><a href="#S06"><span>Slide 6</span> Tres semanas. Una misma conversación.</a></li><li><a href="#S07A"><span>Slide 7A</span> Una campaña conectada.</a></li><li><a href="#S07B"><span>Slide 7B</span> El ritmo de producción del lanzamiento.</a></li><li><a href="#S08"><span>Slide 8</span> Cómo entender esta nueva etapa</a></li><li><a href="#S09"><span>Slide 9</span> El acompañamiento se entiende mejor cuando alguien lo cuenta.</a></li><li><a href="#S10"><span>Slide 10</span> Una alianza. Un marco común para comunicar.</a></li><li><a href="#S11"><span>Slide 11</span> Cada decisión tiene una motivación</a></li><li><a href="#S12"><span>Slide 12</span> Los perfiles se afinan con personas reales.</a></li><li><a href="#STR"><span>Transición</span> Cómo llevamos todo lo que hemos revisado hasta ahora a la comunicación concreta por canal</a></li><li><a href="#S15"><span>Slide 15</span> Imaginar el futuro. Entender el camino.</a></li><li><a href="#S16"><span>Slide 16</span> Carrera médica en Alemania</a></li><li><a href="#S17"><span>Slide 17</span> Vida en Alemania</a></li><li><a href="#S18"><span>Slide 18</span> Preparación y homologación</a></li><li><a href="#SM01"><span>Propuesta de medios 1</span> Qué sabemos de la captación de NOMII</a></li><li><a href="#SM02"><span>Propuesta de medios 2</span> Cuánto cuesta conseguir un postulante seleccionado</a></li><li><a href="#SM03"><span>Propuesta de medios 3</span> Qué tomar de Chile para proyectar Brasil</a></li><li><a href="#SM04"><span>Propuesta de medios 4</span> Cómo decidir la inversión de diciembre y enero</a></li></ol></nav></details></header><main><article id="S01" class="slide dark" aria-labelledby="title-S01"><div class="slide-id">Slide 1</div><div class="editorial"><p class="eyebrow">Sinaxys × NOMII</p><h2 id="title-S01">Portada</h2><p><em>Texto y firma de portada pendientes de definir.</em></p></div></article><nav class="paging" aria-label="Navegar desde Slide 1"><a href="#indice">Índice</a> <a href="#S02">Siguiente →</a></nav>
+<article id="S02" class="slide dark" aria-labelledby="title-S02"><div class="slide-id">Slide 2</div><div class="editorial"><p class="eyebrow">Alemania puede despertar el interés.</p><h2 id="title-S02">Un camino claro permite imaginarse ahí.</h2><p>Sinaxys y NOMII se unen para conectar esa posibilidad con una ruta de preparación y acompañamiento basada en el Método ZAI.</p></div></article><nav class="paging" aria-label="Navegar desde Slide 2"><a href="#S01">← Anterior</a> <a href="#indice">Índice</a> <a href="#S03">Siguiente →</a></nav>
+<article id="S03" class="slide light" aria-labelledby="title-S03"><div class="slide-id">Slide 3</div><div class="editorial"><h2 id="title-S03">El crecimiento empieza con decisiones.</h2><p>Para la bajada metodológica de esta estrategia, tomamos como referencia <strong>Strategy Choice Cascade, utilizado por IDEO U</strong>. Este marco conecta las decisiones esenciales del negocio y permite visualizar y compartir una dirección común para la comunicación y la operación.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de la diapositiva"><table>
+<thead>
+<tr class="header">
+<th>Decisión</th>
+<th>Aplicación a Sinaxys</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>¿Qué queremos lograr?</td>
+<td>Convertir el interés en postulaciones calificadas y clientes.</td>
+</tr>
+<tr class="even">
+<td>¿Dónde vamos a competir?</td>
+<td>Brasil: médicos que exploran, evalúan o deciden su carrera en Alemania.</td>
+</tr>
+<tr class="odd">
+<td>¿Cómo nos diferenciaremos?</td>
+<td>El vínculo local de Sinaxys junto al Método ZAI y la experiencia de NOMII.</td>
+</tr>
+<tr class="even">
+<td>¿Qué necesitamos hacer bien?</td>
+<td>Contenido en portugués, captación, selección y venta consultiva.</td>
+</tr>
+<tr class="odd">
+<td>¿Cómo sostendremos la operación?</td>
+<td>HubSpot y Notion: responsables, seguimiento, medición y aprendizaje.</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>Investigar, probar, aprender y ajustar.</p>
+</blockquote></div></article><nav class="paging" aria-label="Navegar desde Slide 3"><a href="#S02">← Anterior</a> <a href="#indice">Índice</a> <a href="#S04">Siguiente →</a></nav>
+<article id="S04" class="slide light" aria-labelledby="title-S04"><div class="slide-id">Slide 4</div><div class="editorial"><p class="eyebrow">Lanzamiento · 3 semanas</p><h2 id="title-S04">Una nueva etapa. Un camino más claro.</h2><p>Presentar la alianza, explicar el Método ZAI y mostrar a las personas que acompañan el proceso.</p>
+<p><strong>Nueva etapa · Método ZAI · Personas</strong></p>
+<blockquote>
+<p>Sua carreira médica na Alemanha começa antes da viagem.</p>
+</blockquote></div></article><nav class="paging" aria-label="Navegar desde Slide 4"><a href="#S03">← Anterior</a> <a href="#indice">Índice</a> <a href="#S05">Siguiente →</a></nav>
+<article id="S05" class="slide light" aria-labelledby="title-S05"><div class="slide-id">Slide 5</div><div class="editorial"><p class="eyebrow">Pieza de apertura · Propuesta</p><h2 id="title-S05">La alianza empieza con una conversación.</h2><p>Nicolás Orbenes y Luca, juntos en Alemania.</p>
+<div class="panels"><div class="panel"><h3 id="S05-sinaxys--método-zai-by-nomii">Sinaxys + Método ZAI by NOMII</h3>
+<ol type="1">
+<li>Por qué nos unimos</li>
+<li>Qué aporta cada equipo</li>
+<li>Qué significa prepararse</li>
+<li>Cómo acompañamos el camino</li>
+</ol>
+</div><div class="panel"><h3 id="S05-una-grabación-varias-piezas">Una grabación, varias piezas</h3>
+<ul>
+<li><strong>YouTube</strong> · Conversación principal</li>
+<li><strong>Instagram y TikTok</strong> · Corte breve</li>
+<li><strong>Meta Ads</strong> · Versiones con hooks propios</li>
+</ul>
+<p><strong>Duración orientativa</strong> · YouTube 6–8 min · Versión breve 45–60 s.</p>
+</div></div><blockquote>
+<p>Uma nova etapa na Sinaxys. Um caminho construído com a experiência da NOMII.</p>
+</blockquote></div></article><nav class="paging" aria-label="Navegar desde Slide 5"><a href="#S04">← Anterior</a> <a href="#indice">Índice</a> <a href="#S06">Siguiente →</a></nav>
+<article id="S06" class="slide light" aria-labelledby="title-S06"><div class="slide-id">Slide 6</div><div class="editorial"><h2 id="title-S06">Tres semanas. Una misma conversación.</h2><p>Instagram como eje. Distribución y adaptación según el formato.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de la diapositiva"><table>
+<thead>
+<tr class="header">
+<th>Formato</th>
+<th>Semana 1</th>
+<th>Semana 2</th>
+<th>Semana 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Reel</td>
+<td>Por que nos unimos?</td>
+<td>O que significa ser acompanhado?</td>
+<td>As dúvidas que queremos responder</td>
+</tr>
+<tr class="even">
+<td>Carrusel</td>
+<td>O que muda nesta nova etapa?</td>
+<td>Quem faz o quê no seu caminho?</td>
+<td>Do Brasil à Alemanha: as etapas</td>
+</tr>
+<tr class="odd">
+<td>Reel</td>
+<td>Preparar-se vai além do idioma</td>
+<td>Alemão médico na prática</td>
+<td>Uma experiência real da NOMII</td>
+</tr>
+<tr class="even">
+<td>Carrusel</td>
+<td>Alemanha além do hospital</td>
+<td>Sua vida também faz parte do plano</td>
+<td>Onde você quer construir sua carreira?</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Distribución</strong> · Instagram + Facebook · Reels adaptados a TikTok y Shorts · Versiones extensas en YouTube.</p>
+<p><strong>Feed</strong> · 2 reels + 2 carruseles por semana. <strong>Stories</strong> · 2 entregas por semana.</p></div></article><nav class="paging" aria-label="Navegar desde Slide 6"><a href="#S05">← Anterior</a> <a href="#indice">Índice</a> <a href="#S07A">Siguiente →</a></nav>
+<article id="S07A" class="slide light" aria-labelledby="title-S07A"><div class="slide-id">Slide 7A</div><div class="editorial"><h2 id="title-S07A">Una campaña conectada.</h2><p>Del contenido al seguimiento, cada punto de contacto tiene una función.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de la diapositiva"><table>
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Orgánico</td>
+<td>Comprender y confiar.</td>
+</tr>
+<tr class="even">
+<td>Meta Ads</td>
+<td>Explorar y postular.</td>
+</tr>
+<tr class="odd">
+<td>Web / landing médica</td>
+<td>Alianza · Etapas · Requisitos.</td>
+</tr>
+<tr class="even">
+<td>Formulario + HubSpot</td>
+<td>Perfil · Origen · Siguiente paso.</td>
+</tr>
+<tr class="odd">
+<td>Selección y seguimiento</td>
+<td>Email y WhatsApp según el estado del contacto.</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>Cada contacto conserva su origen, su contexto y su siguiente paso.</p>
+</blockquote>
+<p><em>Pauta activa con formulario, CRM y atención operativos.</em></p></div></article><nav class="paging" aria-label="Navegar desde Slide 7A"><a href="#S06">← Anterior</a> <a href="#indice">Índice</a> <a href="#S07B">Siguiente →</a></nav>
+<article id="S07B" class="slide light" aria-labelledby="title-S07B"><div class="slide-id">Slide 7B</div><div class="editorial"><h2 id="title-S07B">El ritmo de producción del lanzamiento.</h2><p>Tres semanas · Las réplicas aprovechan el material principal.</p>
+<div class="panels"><div class="panel"><h3 id="S07B-contenido-y-distribución">Contenido y distribución</h3>
+<ul>
+<li><strong>Instagram</strong> · 2 reels + 2 carruseles por semana. 12 publicaciones de feed en total.</li>
+<li><strong>Facebook</strong> · Réplica del feed: 12 publicaciones.</li>
+<li><strong>Stories de Instagram</strong> · 2 entregas semanales · 6 en total.</li>
+<li><strong>TikTok</strong> · 2 reels reutilizados por semana · 6 en total.</li>
+</ul>
+</div><div class="panel"><h3 id="S07B-profundidad-y-captación">Profundidad y captación</h3>
+<ul>
+<li><strong>YouTube</strong> · 2 videos principales + 6 shorts en total.</li>
+<li><strong>Meta Ads</strong> · Mínimo 5 creativos nuevos por semana. 15 en total · Distribución inicial semanal: 2 TOFU + 2 MOFU + 1 BOFU.</li>
+<li><strong>Web, email y WhatsApp</strong> · 1 landing médica y flujos según el estado del contacto.</li>
+</ul>
+</div></div><blockquote>
+<p>Los flujos de email y WhatsApp se dimensionan por disparador, no como publicaciones semanales.</p>
+</blockquote></div></article><nav class="paging" aria-label="Navegar desde Slide 7B"><a href="#S07A">← Anterior</a> <a href="#indice">Índice</a> <a href="#S08">Siguiente →</a></nav>
+<article id="S08" class="slide light" aria-labelledby="title-S08"><div class="slide-id">Slide 8</div><div class="editorial"><h2 id="title-S08">Cómo entender esta nueva etapa</h2><p>Ejemplo de carrusel · Instagram y Facebook · Semana 1.</p>
+<div class="panels"><div class="panel"><h3 id="S08-pieza-1">Pieza 1</h3>
+<p>O que muda nesta nova etapa?</p>
+<p>Sinaxys + Método ZAI by NOMII.</p>
+</div><div class="panel"><h3 id="S08-pieza-2">Pieza 2</h3>
+<p>Duas experiências. Um caminho conectado.</p>
+<p>Sinaxys no Brasil. Método ZAI da NOMII.</p>
+</div><div class="panel"><h3 id="S08-pieza-3">Pieza 3</h3>
+<p>Antes da viagem, existe preparação.</p>
+<p>Idioma. Documentação. Preparação para o reconhecimento profissional.</p>
+</div><div class="panel"><h3 id="S08-pieza-4">Pieza 4</h3>
+<p>O próximo passo é entender o caminho.</p>
+<p>Acompanhe esta nova etapa.</p>
+</div></div><blockquote>
+<p><strong>Caption propuesto</strong> · Uma nova etapa começa na Sinaxys International. Em parceria com a NOMII, incorporamos o Método ZAI, criado pelo Dr. Nicolás Orbenes, ao nosso programa médico. Nas próximas semanas, vamos mostrar a preparação, as pessoas e as exigências desse caminho.</p>
+</blockquote></div></article><nav class="paging" aria-label="Navegar desde Slide 8"><a href="#S07B">← Anterior</a> <a href="#indice">Índice</a> <a href="#S09">Siguiente →</a></nav>
+<article id="S09" class="slide light" aria-labelledby="title-S09"><div class="slide-id">Slide 9</div><div class="editorial"><h2 id="title-S09">El acompañamiento se entiende mejor cuando alguien lo cuenta.</h2><p>Experiencia real de NOMII · Adaptación para el lanzamiento de Sinaxys.</p>
+<div class="panels"><div class="panel"><h3 id="S09-texto-de-referencia-dentro-del-video">Texto de referencia dentro del video</h3>
+<p>“Eu queria alguém que me orientasse.”</p>
+<p><strong>Marisol · Médica equatoriana.</strong> Experiência de acompanhamento da NOMII.</p>
+<p><em>Subtitulación propuesta en portugués.</em></p>
+</div><div class="panel"><h3 id="S09-lo-que-esta-pieza-debe-mostrar">Lo que esta pieza debe mostrar.</h3>
+<ul>
+<li>La preocupación antes de comenzar.</li>
+<li>El apoyo concreto durante la preparación.</li>
+<li>La persona detrás del proyecto profesional.</li>
+</ul>
+<p><strong>Distribución</strong> · Instagram + Facebook · TikTok · Fragmentos para YouTube Shorts.</p>
+</div></div><blockquote>
+<p><strong>Caption propuesto</strong> · Antes de começar, Marisol tinha uma preocupação: como organizar tudo sem enfrentar o processo sozinha? Ela compartilha sua experiência com a NOMII, empresa que desenvolveu o Método ZAI e agora se une à Sinaxys no Brasil. Uma história para conhecer o lado humano dessa preparação.</p>
+</blockquote>
+<p><em>El caso conserva su origen: NOMII.</em></p></div></article><nav class="paging" aria-label="Navegar desde Slide 9"><a href="#S08">← Anterior</a> <a href="#indice">Índice</a> <a href="#S10">Siguiente →</a></nav>
+<article id="S10" class="slide light" aria-labelledby="title-S10"><div class="slide-id">Slide 10</div><div class="editorial"><p class="eyebrow">Manual de marca · Línea médica</p><h2 id="title-S10">Una alianza. Un marco común para comunicar.</h2><p>Toda comunicación sobre el Método ZAI, el proceso y la experiencia de NOMII debe seguir el manual de la alianza.</p>
+<div class="panels"><div class="panel"><h3 id="S10-autoría-reconocible">Autoría reconocible</h3>
+<p>El Método ZAI se identifica como metodología de NOMII.</p>
+</div><div class="panel"><h3 id="S10-testimonios-con-contexto">Testimonios con contexto</h3>
+<p>Los casos de NOMII conservan su origen, contexto y etapa real.</p>
+</div><div class="panel"><h3 id="S10-mensajes-consistentes-y-respaldados">Mensajes consistentes y respaldados</h3>
+<p>Proceso, servicios y condiciones deben coincidir con la oferta vigente.</p>
+</div></div><blockquote>
+<p>Mismo criterio en redes, web, anuncios, mailings y materiales comerciales.</p>
+</blockquote>
+<p><a href="https://app.notion.com/p/41d4f31adda3801cb92cedf31c70edeb">Consultar manual completo en Notion ↗</a></p></div></article><nav class="paging" aria-label="Navegar desde Slide 10"><a href="#S09">← Anterior</a> <a href="#indice">Índice</a> <a href="#S11">Siguiente →</a></nav>
+<article id="S11" class="slide light" aria-labelledby="title-S11"><div class="slide-id">Slide 11</div><div class="editorial"><p class="eyebrow">Investigación propia NOMII</p><h2 id="title-S11">Cada decisión tiene una motivación</h2><p>Nuestro estudio interno explora qué buscan los clientes, qué les preocupa y qué necesitan para confiar.</p>
+<div class="panels"><div class="panel"><h3 id="S11-ambicioso-profesional">Ambicioso profesional</h3>
+<p>Busca especializarse, crecer y superar límites en su trayectoria.</p>
+</div><div class="panel"><h3 id="S11-proyecta-en-familia">Proyecta en familia</h3>
+<p>Evalúa el bienestar y la viabilidad del proyecto familiar.</p>
+</div><div class="panel"><h3 id="S11-migrante-por-seguridad">Migrante por seguridad</h3>
+<p>Busca ejercer y vivir con mayor tranquilidad.</p>
+</div></div><blockquote>
+<p>Un aprendizaje transversal: claridad, acompañamiento y respaldo verificable.</p>
+</blockquote>
+<p><em>Estos aprendizajes orientan el punto de partida; no representan una segmentación validada de Brasil.</em></p></div></article><nav class="paging" aria-label="Navegar desde Slide 11"><a href="#S10">← Anterior</a> <a href="#indice">Índice</a> <a href="#S12">Siguiente →</a></nav>
+<article id="S12" class="slide light" aria-labelledby="title-S12"><div class="slide-id">Slide 12</div><div class="editorial"><h2 id="title-S12">Los perfiles se afinan con personas reales.</h2><p>Durante los primeros meses, contrastaremos las hipótesis con postulaciones, conversaciones y decisiones de clientes de Sinaxys.</p>
+<div class="panels"><div class="panel"><h3 id="S12-probar-mensajes">Probar mensajes</h3>
+<p>Motivaciones y objeciones.</p>
+</div><div class="panel"><h3 id="S12-escuchar-en-selección">Escuchar en selección</h3>
+<p>Interés, requisitos y disposición para comenzar.</p>
+</div><div class="panel"><h3 id="S12-contrastar-con-clientes">Contrastar con clientes</h3>
+<p>Qué influyó en su decisión y qué necesitaron resolver.</p>
+</div><div class="panel"><h3 id="S12-ajustar-la-comunicación">Ajustar la comunicación</h3>
+<p>Actualizar perfiles, mensajes y contenidos con lo aprendido.</p>
+</div></div><blockquote>
+<p>HubSpot conectará el origen del contacto con su motivación y avance comercial.</p>
+</blockquote>
+<p><strong>Evaluaremos postulaciones calificadas, reuniones realizadas y avance hacia clientes.</strong></p></div></article><nav class="paging" aria-label="Navegar desde Slide 12"><a href="#S11">← Anterior</a> <a href="#indice">Índice</a> <a href="#STR">Siguiente →</a></nav>
+<article id="STR" class="slide dark" aria-labelledby="title-STR"><div class="slide-id">Transición</div><div class="editorial"><h2 id="title-STR">Cómo llevamos todo lo que hemos revisado hasta ahora a la comunicación concreta por canal</h2></div></article><nav class="paging" aria-label="Navegar desde Transición"><a href="#S12">← Anterior</a> <a href="#indice">Índice</a> <a href="#S15">Siguiente →</a></nav>
+<article id="S15" class="slide light" aria-labelledby="title-S15"><div class="slide-id">Slide 15</div><div class="editorial"><h2 id="title-S15">Imaginar el futuro. Entender el camino.</h2><p>Cinco pilares para despertar interés, orientar y construir confianza.</p>
+<div class="panels"><div class="panel"><h3 id="S15-carrera-médica-en-alemania">Carrera médica en Alemania</h3>
+<p>Ejercicio profesional, especialización y oportunidades, con sus condiciones y exigencias.</p>
+</div><div class="panel"><h3 id="S15-vida-en-alemania">Vida en Alemania</h3>
+<p>Adaptación, vivienda, costo de vida, cultura y familia.</p>
+</div><div class="panel"><h3 id="S15-preparación-y-homologación">Preparación y homologación</h3>
+<p>Idioma, documentación, etapas y exámenes explicados con claridad.</p>
+</div><div class="panel"><h3 id="S15-experiencias-y-personas">Experiencias y personas</h3>
+<p>Vivencias, dificultades, aprendizajes y avances de médicos y equipos.</p>
+</div><div class="panel"><h3 id="S15-metodología-y-acompañamiento">Metodología y acompañamiento</h3>
+<p>Cómo se organiza la preparación con Sinaxys y el Método ZAI de NOMII.</p></div></div></div></article><nav class="paging" aria-label="Navegar desde Slide 15"><a href="#STR">← Anterior</a> <a href="#indice">Índice</a> <a href="#S16">Siguiente →</a></nav>
+<article id="S16" class="slide light" aria-labelledby="title-S16"><div class="slide-id">Slide 16</div><div class="editorial"><h2 id="title-S16">Carrera médica en Alemania</h2><div class="panels"><div class="panel"><h3 id="S16-objetivo-del-pilar">Objetivo del pilar</h3>
+<p>Explorar el ejercicio profesional, la formación especializada y las oportunidades en Alemania, con sus condiciones y exigencias.</p>
+</div><div class="panel"><h3 id="S16-qué-comunicaremos">Qué comunicaremos</h3>
+<ul>
+<li>Especialización y desarrollo</li>
+<li>Rutina y entorno clínico</li>
+<li>Remuneración y condiciones laborales</li>
+<li>Oportunidades y requisitos</li>
+</ul></div></div></div></article><nav class="paging" aria-label="Navegar desde Slide 16"><a href="#S15">← Anterior</a> <a href="#indice">Índice</a> <a href="#S17">Siguiente →</a></nav>
+<article id="S17" class="slide light" aria-labelledby="title-S17"><div class="slide-id">Slide 17</div><div class="editorial"><h2 id="title-S17">Vida en Alemania</h2><div class="panels"><div class="panel"><h3 id="S17-objetivo-del-pilar">Objetivo del pilar</h3>
+<p>Acercar la vida cotidiana en Alemania, mostrando las posibilidades y los desafíos de adaptarse y construir un proyecto personal o familiar.</p>
+</div><div class="panel"><h3 id="S17-qué-comunicaremos">Qué comunicaremos</h3>
+<ul>
+<li>Vivienda y costo de vida</li>
+<li>Cultura y adaptación</li>
+<li>Vida cotidiana y tiempo libre</li>
+<li>Pareja y familia</li>
+</ul></div></div></div></article><nav class="paging" aria-label="Navegar desde Slide 17"><a href="#S16">← Anterior</a> <a href="#indice">Índice</a> <a href="#S18">Siguiente →</a></nav>
+<article id="S18" class="slide light" aria-labelledby="title-S18"><div class="slide-id">Slide 18</div><div class="editorial"><h2 id="title-S18">Preparación y homologación</h2><div class="panels"><div class="panel"><h3 id="S18-objetivo-del-pilar">Objetivo del pilar</h3>
+<p>Explicar el camino para ejercer en Alemania, haciendo comprensibles sus etapas, requisitos y exigencias de preparación.</p>
+</div><div class="panel"><h3 id="S18-qué-comunicaremos">Qué comunicaremos</h3>
+<ul>
+<li>Alemán general y médico</li>
+<li>Documentación y trámites</li>
+<li>Etapas y exámenes</li>
+<li>Preparación y planificación</li>
+</ul></div></div></div></article><nav class="paging" aria-label="Navegar desde Slide 18"><a href="#S17">← Anterior</a> <a href="#indice">Índice</a> <a href="#SM01">Siguiente →</a></nav>
+<article id="SM01" class="slide light" aria-labelledby="title-SM01"><div class="slide-id">Propuesta de medios 1</div><div class="editorial"><p class="eyebrow">BASE HISTÓRICA · MAYO–OCTUBRE 2026</p><h2 id="title-SM01">Qué sabemos de la captación de NOMII</h2><p>Para dimensionar Brasil, partimos de seis meses de captación de médicos en Chile, México, Colombia, Perú y Ecuador.</p>
+<p><strong>2.102 tickets creados en HubSpot</strong> forman el universo bruto extraído entre el 1 de mayo y el 31 de octubre. Falta identificar cuántos corresponden a los cinco países, quitar duplicados y confirmar el origen pagado.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de la diapositiva"><table>
+<thead>
+<tr class="header">
+<th>Fuente</th>
+<th>Qué aporta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Meta Ads</td>
+<td>Inversión en euros por mes y país. El borrador aún no trae los importes.</td>
+</tr>
+<tr class="even">
+<td>HubSpot</td>
+<td>Fecha de la primera postulación y paso a «Postulante seleccionado».</td>
+</tr>
+<tr class="odd">
+<td>Fynk + HubSpot</td>
+<td>Contrato firmado y pago parcial o completo del mismo médico.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Corte objetivo del cruce</strong> · 22 de noviembre de 2026. El volumen pagado, los seleccionados y los clientes cerrados siguen pendientes de conciliación.</p></div></article><nav class="paging" aria-label="Navegar desde Propuesta de medios 1"><a href="#S18">← Anterior</a> <a href="#indice">Índice</a> <a href="#SM02">Siguiente →</a></nav>
+<article id="SM02" class="slide light" aria-labelledby="title-SM02"><div class="slide-id">Propuesta de medios 2</div><div class="editorial"><p class="eyebrow">INDICADOR PRINCIPAL · COSTO POR TICKET DE SELECCIÓN</p><h2 id="title-SM02">Cuánto cuesta conseguir un postulante seleccionado</h2><p>El formulario crea un ticket. Para medir el resultado de medios, distinguiremos la postulación inicial del momento en que el médico alcanza «Postulante seleccionado» en HubSpot.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de la diapositiva"><table>
+<thead>
+<tr class="header">
+<th>Qué queremos saber</th>
+<th>Cómo lo medimos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>¿Cuántos médicos postulan?</td>
+<td>Primeras postulaciones únicas atribuibles a la pauta. El promedio mensual es el total dividido por seis.</td>
+</tr>
+<tr class="even">
+<td>¿Cuánto cuesta cada postulación?</td>
+<td>Inversión de Meta ÷ postulaciones únicas atribuibles a Meta.</td>
+</tr>
+<tr class="odd">
+<td>¿Cuánto cuesta un ticket de selección?</td>
+<td>Inversión de Meta ÷ postulantes únicos atribuibles a Meta que alcanzaron la etapa de selección.</td>
+</tr>
+<tr class="even">
+<td>¿Cuántos llegan a cliente?</td>
+<td>Médicos con contrato firmado y primer pago, vinculados a la cohorte de su primera postulación.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mostraremos la conversión de postulación a selección y de selección a cliente. El costo regional se calculará con la inversión total y los seleccionados totales. El borrador agrupa el origen bajo «Paid». Falta aislar Meta o confirmar que ese grupo corresponde íntegramente a la inversión disponible antes de calcular los costos.</p></div></article><nav class="paging" aria-label="Navegar desde Propuesta de medios 2"><a href="#SM01">← Anterior</a> <a href="#indice">Índice</a> <a href="#SM03">Siguiente →</a></nav>
+<article id="SM03" class="slide light" aria-labelledby="title-SM03"><div class="slide-id">Propuesta de medios 3</div><div class="editorial"><p class="eyebrow">REFERENCIA DE MERCADO · CHILE Y PAÍSES FOCO</p><h2 id="title-SM03">Qué tomar de Chile para proyectar Brasil</h2><p>Chile es la referencia inicial de Edward. Para trasladar esa experiencia a Brasil, primero necesitamos entender por dónde postula el médico y cuántos pasos recorre hasta selección.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de la diapositiva"><table>
+<thead>
+<tr class="header">
+<th>Comparación</th>
+<th>Qué pondremos en pantalla</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Chile por vía de entrada</td>
+<td>Formulario nativo, landing u otra vía identificada. Para cada una, postulaciones, seleccionados y clientes. Mostraremos el costo donde se pueda asignar el gasto.</td>
+</tr>
+<tr class="even">
+<td>Chile y los otros cuatro mercados</td>
+<td>Inversión, postulaciones, promedio mensual, seleccionados, costo por seleccionado y clientes por país.</td>
+</tr>
+<tr class="odd">
+<td>Referencia para Brasil</td>
+<td>Comparar la vía prevista para Sinaxys con la vía equivalente de Chile y con el resultado regional ponderado.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Pendiente</strong> · El histórico aún no desglosa Chile por vía de entrada. Hasta completar ese cruce, el costo chileno y el promedio regional quedan abiertos.</p></div></article><nav class="paging" aria-label="Navegar desde Propuesta de medios 3"><a href="#SM02">← Anterior</a> <a href="#indice">Índice</a> <a href="#SM04">Siguiente →</a></nav>
+<article id="SM04" class="slide light" aria-labelledby="title-SM04"><div class="slide-id">Propuesta de medios 4</div><div class="editorial"><p class="eyebrow">PROPUESTA PARA BRASIL · PRUEBA Y CONTINUIDAD</p><h2 id="title-SM04">Cómo decidir la inversión de diciembre y enero</h2><p>En diciembre proponemos captar desde el primer anuncio y probar dos motivaciones en la misma landing: carrera médica y proyecto familiar. En enero proponemos ajustar la inversión según el costo observado en Brasil y la capacidad real de selección y ventas.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de la diapositiva"><table>
+<thead>
+<tr class="header">
+<th>Etapa</th>
+<th>Qué probaremos</th>
+<th>Qué decidir con el resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TOFU · Descubrimiento</td>
+<td>Piezas de carrera y proyecto familiar.</td>
+<td>Qué mensaje genera visitas pertinentes a la landing.</td>
+</tr>
+<tr class="even">
+<td>MOFU · Consideración</td>
+<td>Etapas, requisitos y preparación.</td>
+<td>Qué piezas generan postulaciones y cuántas llegan a selección.</td>
+</tr>
+<tr class="odd">
+<td>BOFU · Decisión</td>
+<td>Caso médico, invitación a selección y seguimiento.</td>
+<td>Qué volumen llega a reunión asistida y a primer pago por cohorte.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Para dimensionar el presupuesto</strong> · Meta de seleccionados × costo por ticket de selección comparable. Las postulaciones necesarias se estiman dividiendo la meta de seleccionados por la tasa de postulación a selección.</p>
+<p><strong>Decisión pendiente</strong> · Edward propone el monto de diciembre y enero cuando estén conciliados los costos. Sinaxys confirma cuántos casos puede atender. El primer piloto brasileño permitirá revisar ambos supuestos.</p></div></article><nav class="paging" aria-label="Navegar desde Propuesta de medios 4"><a href="#SM03">← Anterior</a> <a href="#indice">Índice</a></nav></main></body>
 </html>

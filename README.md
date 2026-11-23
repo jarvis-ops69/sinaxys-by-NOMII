@@ -4,7 +4,7 @@ Versión de trabajo del 23 de noviembre de 2026. Edward, Natalia y Elías prepar
 
 ## Cómo empezar a trabajar
 
-**¿Quieres avanzar?** Elige una [tarea del tablero](https://github.com/users/jarvis-ops69/projects/2) o empieza por [D17 · Inversión](https://app.notion.com/p/4214f31adda381c2a079fc04ac35fbb0). El agente abre la ficha, te explica el recorrido, te pregunta cómo quieres resolver la tarea y guarda tus decisiones en Notion. Cuando pidas preparar la lámina, recibirás una vista previa en una PR. [Roadmap de las 18 láminas](presentacion/ROADMAP.md).
+**¿Quieres avanzar?** Elige tu diapositiva en el [roadmap editorial](presentacion/ROADMAP.md). Cada fila enlaza el issue, la ficha de Notion, el Markdown y el HTML individual. [Abre la presentación completa](presentacion/index.html). El agente explica la tarea y el último acuerdo, registra tus decisiones en Notion y deja la vista en una PR cuando pidas llevarlas a la presentación. Los frentes de la primera mesa conservan sus códigos, incluido [D17 · Inversión](https://app.notion.com/p/4214f31adda381c2a079fc04ac35fbb0).
 
 Todos los agentes leen primero [AGENTS.md](AGENTS.md) y la [bitácora](BITACORA.md). Si conectas un agente externo, incluye esta instrucción en su configuración inicial. «Al iniciar o retomar una tarea, lee y aplica AGENTS.md del main vigente y explica el proceso a la persona en tu primera respuesta». Las entradas de la bitácora enlazan las propuestas con su revisión en GitHub.
 
@@ -23,7 +23,7 @@ Sinaxys presenta el Método ZAI by NOMII a médicos de Brasil que evalúan ejerc
 
 En este proyecto, la postulación abre un ticket. **La primera llamada de selección respondida es el hito que define el MQL y activa el traspaso a Sinaxys.** El setter registra contexto y próximos pasos. Los intentos sin respuesta siguen a cargo de NOMII. Sinaxys registra reunión, propuesta, seguimiento y cierre con firma y primer pago.
 
-La minuta define el relato. En la apertura se ve el lanzamiento en portugués. El manual explica después las decisiones de marca que el público acaba de ver. Los canales, el recorrido del médico y la operación llevan al plan de inversión y a las decisiones que se piden a Sinaxys. Diciembre instala y prueba la operación con captación desde el inicio. Enero busca captación sostenida. Febrero permite evaluar las cohortes y ajustar.
+La sección «Textos para la presentación» de Notion define la secuencia editorial actual. El guion de la primera mesa conserva el razonamiento del lanzamiento en portugués. El manual explica después las decisiones de marca que el público acaba de ver. Los canales, el recorrido del médico y la operación llevan al plan de inversión y a las decisiones que se piden a Sinaxys. Diciembre instala y prueba la operación con captación desde el inicio. Enero busca captación sostenida. Febrero permite evaluar las cohortes y ajustar.
 
 ## Qué trae cada persona a la próxima versión
 
