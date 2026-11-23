@@ -2,6 +2,10 @@
 
 Versión de trabajo del 23 de noviembre de 2026. Edward, Natalia y Elías preparan aquí la presentación para la dirección de Sinaxys. La pregunta que abre la reunión es **¿qué verá un médico brasileño cuando presentemos la alianza y qué ocurrirá si decide postular?**
 
+## Cómo empezar a trabajar
+
+Todos los agentes leen primero [AGENTS.md](AGENTS.md) y la [bitácora](BITACORA.md). Si conectas un agente externo, incluye esta instrucción en su configuración inicial. «Antes de editar este repositorio, lee y sigue el AGENTS.md de la raíz de `main`». Las entradas de la bitácora enlazan las propuestas con su revisión en GitHub.
+
 ## Documentos de trabajo
 
 | Documento | Para qué usarlo |
@@ -27,4 +31,4 @@ La minuta define el relato. En la apertura se ve el lanzamiento en portugués. E
 | Natalia · Comunicaciones | Muestra de lanzamiento en PT-BR, reglas de marca y testimonios, guiones, carruseles, grilla por canal y persona que revisará el portugués en Sinaxys. |
 | Elías · Datos e integración | Recorrido de prueba desde campaña hasta primer pago, con eventos, tickets, cambio de responsable, automatizaciones, tablero y dependencias de cuentas y licencias. |
 
-Para trabajar en conjunto, cada responsable completa su bloque en Notion con la pieza o cifra, su fuente y la decisión que necesita. Cuando la mesa acuerde un cambio, se actualiza el guion en `main`. El PDF conserva la propuesta de partida. Los ejemplos creativos, la distribución semanal y los escenarios del guion son material de trabajo.
+Para trabajar en conjunto, cada responsable completa su bloque en Notion con la pieza o cifra, su fuente y la decisión que necesita. Cada cambio al guion llega a `main` mediante una pull request que Edward revisa e integra personalmente. El PDF conserva la propuesta de partida. Los ejemplos creativos, la distribución semanal y los escenarios del guion son material de trabajo.
