@@ -24,6 +24,7 @@ Revisa primero **«Textos para la presentación»** en [Estrategia Sinaxys](http
 | [S16 · Carrera médica en Alemania](diapositivas/S16.md) | Natalia | Validar el alcance y los temas del pilar de carrera médica. | [Notion](https://app.notion.com/p/4214f31adda381d99bc7f01f6b433d63) · [#36](https://github.com/jarvis-ops69/sinaxys-by-NOMII/issues/36) | [HTML](html/S16.html) |
 | [S17 · Vida en Alemania](diapositivas/S17.md) | Natalia | Validar qué aspectos de la vida cotidiana y familiar se comunicarán. | [Notion](https://app.notion.com/p/4214f31adda3819abd9eed4c12915c56) · [#37](https://github.com/jarvis-ops69/sinaxys-by-NOMII/issues/37) | [HTML](html/S17.html) |
 | [S18 · Preparación y homologación](diapositivas/S18.md) | Natalia | Revisar los temas de idioma, documentación, etapas y preparación. | [Notion](https://app.notion.com/p/4214f31adda3813399affb6fbe2d2866) · [#38](https://github.com/jarvis-ops69/sinaxys-by-NOMII/issues/38) | [HTML](html/S18.html) |
+| [S23A · El punto de partida lo marca el médico.](diapositivas/S23A.md) | Natalia, con Edward y Elías | Revisar tres mensajes en PT-BR, entradas a una landing y señales de seguimiento. | [Notion](https://app.notion.com/p/4214f31adda381bb890dda37e07ac194) · [#12](https://github.com/jarvis-ops69/sinaxys-by-NOMII/issues/12) | [HTML](html/S23A.html) |
 
 ## Propuesta de Edward · Medios e inversión
 
