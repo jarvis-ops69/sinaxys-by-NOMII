@@ -1,4 +1,5 @@
 """Genera la presentación y un documento HTML autónomo por diapositiva."""
+from base64 import b64encode
 from html import escape
 from pathlib import Path
 import re
@@ -9,12 +10,20 @@ SHEET = re.compile(r"^\| \[(S(?:M?\d+[A-Z]?|TR)) · [^\]]+\]\(diapositivas/([^/)
 COMMENTS = re.compile(r"<!--.*?-->", re.S)
 
 
+def embed_png(match):
+    # El HTML general y el individual deben poder abrirse también sin conexión.
+    data = (ROOT / "recursos" / match[1]).read_bytes()
+    encoded = b64encode(data).decode("ascii")
+    return f'<img src="data:image/png;base64,{encoded}"'
+
+
 def slide_body(markdown, key):
     """Agrupa los apartados de la lámina y deja el pie fuera de las columnas."""
     html = subprocess.run(
         ["pandoc", "--from=gfm-raw_html", "--to=html5", "--wrap=none", "--id-prefix", key + "-"],
         input=markdown, text=True, check=True, capture_output=True, cwd=ROOT,
     ).stdout.strip()
+    html = re.sub(r'<img src="\.\./recursos/([A-Za-z0-9_-]+\.png)"', embed_png, html)
     html = html.replace("<table>", '<div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de la diapositiva"><table>').replace("</table>", "</table></div>")
     groups = re.split(r"(?=<h3\b)", html)
     if len(groups) == 1:
