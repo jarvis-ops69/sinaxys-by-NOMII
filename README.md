@@ -4,14 +4,16 @@ Versión de trabajo del 23 de noviembre de 2026. Edward, Natalia y Elías prepar
 
 ## Cómo empezar a trabajar
 
-Todos los agentes leen primero [AGENTS.md](AGENTS.md) y la [bitácora](BITACORA.md). Si conectas un agente externo, incluye esta instrucción en su configuración inicial. «Antes de editar este repositorio, lee y sigue el AGENTS.md de la raíz de `main`». Las entradas de la bitácora enlazan las propuestas con su revisión en GitHub.
+**¿Quieres avanzar?** Elige tu diapositiva en el [roadmap editorial](presentacion/ROADMAP.md). Cada fila enlaza el issue, la ficha de Notion, el Markdown y el HTML individual. [Abre la presentación completa](presentacion/index.html). El agente explica la tarea y el último acuerdo, registra tus decisiones en Notion y deja la vista en una PR cuando pidas llevarlas a la presentación. Los frentes de la primera mesa conservan sus códigos, incluido [D17 · Inversión](https://app.notion.com/p/4214f31adda381c2a079fc04ac35fbb0).
+
+Todos los agentes leen primero [AGENTS.md](AGENTS.md) y la [bitácora](BITACORA.md). Si conectas un agente externo, incluye esta instrucción en su configuración inicial. «Al iniciar o retomar una tarea, lee y aplica AGENTS.md del main vigente y explica el proceso a la persona en tu primera respuesta». Las entradas de la bitácora enlazan las propuestas con su revisión en GitHub.
 
 ## Documentos de trabajo
 
 | Documento | Para qué usarlo |
 | --- | --- |
 | [Guion de la presentación](presentacion/guion-estrategico.md) | Desarrollar las láminas, revisar el ejemplo de lanzamiento, completar el plan de medios y preparar las decisiones de la mesa. |
-| [Blueprint para Claude](presentacion/claude/CLAUDE_DECK_BLUEPRINT.md) | Construir o rediseñar la presentación completa: sistema visual, narrativa, 52 slides y los cuatro workflows de lifecycle email con cadencia, CTA y reglas de salida. |
+| [Blueprint para Claude](presentacion/claude/CLAUDE_DECK_BLUEPRINT.md) | Revisar una propuesta visual de 52 slides y cuatro workflows de lifecycle email; validar narrativa, secuencia, cadencias, CTA y reglas antes de llevarla a diseño. |
 | [Propuesta comercial preliminar](fuentes/Propuesta_preliminar_comercial_Metodo_ZAI_Sinaxys_Brasil.pdf) | Consultar el alcance propuesto, las frecuencias editoriales, la dedicación inicial y los anexos de implementación. |
 | [Estrategia Sinaxys en Notion](https://app.notion.com/p/4214f31adda380a5ae92ffde3c14eb62) | Trabajar los textos, piezas, supuestos y pendientes de cada responsable antes de consolidar una nueva versión. |
 | [Minuta de la mesa del 23 de noviembre](https://app.notion.com/p/4214f31adda3818a82efef2c9457ddd9) | Recuperar el razonamiento y el orden acordado para presentar la estrategia. |
@@ -22,7 +24,7 @@ Sinaxys presenta el Método ZAI by NOMII a médicos de Brasil que evalúan ejerc
 
 En este proyecto, la postulación abre un ticket. **La primera llamada de selección respondida es el hito que define el MQL y activa el traspaso a Sinaxys.** El setter registra contexto y próximos pasos. Los intentos sin respuesta siguen a cargo de NOMII. Sinaxys registra reunión, propuesta, seguimiento y cierre con firma y primer pago.
 
-La minuta define el relato. En la apertura se ve el lanzamiento en portugués. El manual explica después las decisiones de marca que el público acaba de ver. Los canales, el recorrido del médico y la operación llevan al plan de inversión y a las decisiones que se piden a Sinaxys. Diciembre instala y prueba la operación con captación desde el inicio. Enero busca captación sostenida. Febrero permite evaluar las cohortes y ajustar.
+La sección «Textos para la presentación» de Notion define la secuencia editorial actual. El guion de la primera mesa conserva el razonamiento del lanzamiento en portugués. El manual explica después las decisiones de marca que el público acaba de ver. Los canales, el recorrido del médico y la operación llevan al plan de inversión y a las decisiones que se piden a Sinaxys. Diciembre instala y prueba la operación con captación desde el inicio. Enero busca captación sostenida. Febrero permite evaluar las cohortes y ajustar.
 
 ## Qué trae cada persona a la próxima versión
 

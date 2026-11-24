@@ -1,8 +1,8 @@
 # Sinaxys × NOMII — Blueprint de presentación para Claude
 
-> **Propósito:** especificar una presentación visual, editable y fiel a la narrativa ya aprobada para Sinaxys Brasil. Este archivo es el contrato de construcción para diseño: conserva el hilo de las láminas existentes, integra el funnel Lead-to-Client y expande el bloque de lifecycle email en cuatro workflows concretos.
+> **Propósito:** especificar una presentación visual, editable y basada en la narrativa y los materiales actuales de Sinaxys Brasil, pendiente de revisión de contenido. Este archivo es una propuesta para revisar con el equipo antes de convertirla en un encargo de diseño. Conserva el hilo editorial existente y plantea una posible expansión del bloque Lead-to-Client.
 >
-> **Resultado esperado:** una presentación de **52 slides**, 16:9, visual-first, con copy final en **portugués brasileño (PT-BR)**. No crear una presentación corporativa genérica: debe sentirse como una ruta clara y humana para médicos brasileños que evalúan Alemania.
+> **Resultado esperado:** una presentación de **52 slides (secuencia propuesta, pendiente de validar)**, 16:9, visual-first, con copy final en **portugués brasileño (PT-BR)**. No crear una presentación corporativa genérica: debe sentirse como una ruta clara y humana para médicos brasileños que evalúan Alemania.
 
 ---
 
@@ -258,11 +258,11 @@ La presentación se organiza en seis movimientos:
 
 ### 37 — Cal: agenda y routing
 - **Titular PT-BR:** `A agenda distribui oportunidade, não só horários.`
-- **Visual:** calendar con disponibilidad sincronizada, round-robin Setter, recordatorio y un único reagendamento. Capa inferior: `Cal booking ID → HubSpot`.
+- **Visual:** calendar con disponibilidad sincronizada, distribución de agenda a Setter (round-robin sólo si Sinaxys lo valida), recordatorio y un único reagendamento. Capa inferior: `Cal booking ID → HubSpot`.
 
 ### 38 — Selección: conversación con criterio
 - **Titular PT-BR:** `A chamada transforma interesse em informação útil.`
-- **Visual:** llamada Setter de 30 min con cuatro tarjetas: contexto / motivação / barreiras / próximo passo. Resultados: `MQL`, `nutrição`, `não apto`. Un letrero claro: `Setter não apresenta preço.`
+- **Visual:** conversación inicial breve con Setter (el proceso de referencia NOMII dura 5–7 minutos; validar la duración en Sinaxys) con cuatro tarjetas: contexto / motivação / barreiras / próximo passo. Resultados: `MQL`, `nutrição`, `não apto`. Un letrero claro: `Setter não apresenta preço.`
 
 ### 39 — Lifecycle email: no es newsletter
 - **Titular PT-BR:** `Cada mensagem aparece quando ajuda a avançar.`
@@ -273,7 +273,7 @@ La presentación se organiza en seis movimientos:
 
 ## 5. Bloque expandido de email: cuatro workflows a construir
 
-> **Estructura:** estos cuatro workflows vienen de la auditoría de configuraciones activas de HubSpot y se transforman aquí en una propuesta de deck. Los conteos expresan la escala que se debe configurar; antes de publicar, cada asunto, consentimento, idioma, remitente, timing y condición de salida debe pasar revisión comercial, legal y operativa.
+> **Estructura:** los cuatro workflows, sus cantidades, cadencias y reglas de salida son hipótesis para discutir; no provienen de una auditoría verificada de automatizaciones activas ni constituyen una decisión de configuración. Antes de publicar, cada asunto, consentimiento, idioma, remitente, timing y condición de salida debe pasar revisión comercial, legal y operativa.
 
 ### 40 — Workflow 1: Descarga de guía
 - **Eyebrow:** `EMAIL LIFECYCLE · 01 / 04`
@@ -357,7 +357,7 @@ La presentación se organiza en seis movimientos:
 ### 45 — Traspaso a ventas: el contexto viaja
 - **Titular PT-BR:** `O Closer recebe uma oportunidade, não um lead frio.`
 - **Visual:** dossier/memoria de conversación pasa del Setter al Closer. Campos visibles: origem, motivação, barreiras, idioma, horizonte, minuta y próximo passo.
-- **Regla:** agenda Closer creada durante/desde Setter = SQL y Deal. Ningún prospecto salta directamente desde formulario a Closer.
+- **Regla:** Propuesta por validar con Elías: después de la conversación inicial, derivar al Closer sólo los perfiles que cumplan los criterios acordados; definir en HubSpot cuándo se crea SQL/Deal y si se admite una ruta directa.
 
 ### 46 — Venta: decisión y seguimiento
 - **Titular PT-BR:** `A venda continua um processo que já tem contexto.`
@@ -378,7 +378,7 @@ La presentación se organiza en seis movimientos:
 
 ### 50 — Identidad de datos: una cadena verificable
 - **Titular PT-BR:** `Cada etapa deixa uma evidência conectada.`
-- **Visual:** modelo de identidad horizontal: email normalizado + HubSpot Contact ID + UTM/fonte + formulário + Cal booking ID + meeting/ticket + Deal + contrato + Stripe customer/payment ID.
+- **Visual:** modelo de identidad horizontal: email normalizado + HubSpot Contact ID + UTM/fonte + formulário + Cal booking ID + meeting/ticket + Deal + contrato + ID de cliente/pago del proveedor que confirme Sinaxys (por definir).
 - **Regla:** el dashboard no debe inventar relaciones; debe usar claves persistentes y estados verificables.
 
 ### 51 — Operación: una arquitectura compartida
@@ -437,12 +437,12 @@ La presentación se organiza en seis movimientos:
 ## 7. Fuentes de construcción
 
 - Página estratégica Sinaxys en Notion: secuencia de slides 01–44 y referencias visuales existentes.
-- Auditoría de workflows HubSpot: escalas actuales identificadas para el bloque de marketing automation:
+- Hipótesis de workflows para HubSpot (no constituye auditoría ni confirma configuraciones activas):
   - Descarga de guía: 5 emails.
   - TOFU Lead Gen: 12 emails.
   - MOFU Agenda: 8 emails.
   - BOFU Testimonios / Agenda: 9 emails.
-- Arquitectura operativa del funnel Lead-to-Client documentada para Sinaxys Brasil.
+- Arquitectura operativa propuesta para el funnel Lead-to-Client; requiere validación de Sinaxys y Elías.
 - Propuesta comercial preliminar del Método ZAI para frecuencia de canales, inversión y roadmap.
 
-> **Nota de implementación:** este blueprint describe una propuesta de presentación y configuración futura. No activa envíos, automatizaciones, calendar routing, pipelines, cobros ni comunicaciones.
+> **Nota de implementación:** este blueprint propone contenido y flujos futuros, pendientes de aprobación. No documenta sistemas activos ni autoriza envíos, automatizaciones, routing, pipelines, cobros o comunicaciones.
