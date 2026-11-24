@@ -11,7 +11,7 @@ Todos los agentes leen primero [AGENTS.md](AGENTS.md) y la [bitácora](BITACORA.
 | Documento | Para qué usarlo |
 | --- | --- |
 | [Guion de la presentación](presentacion/guion-estrategico.md) | Desarrollar las láminas, revisar el ejemplo de lanzamiento, completar el plan de medios y preparar las decisiones de la mesa. |
-| [Blueprint para Claude](presentacion/claude/CLAUDE_DECK_BLUEPRINT.md) | Construir o rediseñar la presentación completa: sistema visual, narrativa, 52 slides y los cuatro workflows de lifecycle email con cadencia, CTA y reglas de salida. |
+| [Blueprint para Claude](presentacion/claude/CLAUDE_DECK_BLUEPRINT.md) | Revisar una propuesta visual de 52 slides y cuatro workflows de lifecycle email; validar narrativa, secuencia, cadencias, CTA y reglas antes de llevarla a diseño. |
 | [Propuesta comercial preliminar](fuentes/Propuesta_preliminar_comercial_Metodo_ZAI_Sinaxys_Brasil.pdf) | Consultar el alcance propuesto, las frecuencias editoriales, la dedicación inicial y los anexos de implementación. |
 | [Estrategia Sinaxys en Notion](https://app.notion.com/p/4214f31adda380a5ae92ffde3c14eb62) | Trabajar los textos, piezas, supuestos y pendientes de cada responsable antes de consolidar una nueva versión. |
 | [Minuta de la mesa del 23 de noviembre](https://app.notion.com/p/4214f31adda3818a82efef2c9457ddd9) | Recuperar el razonamiento y el orden acordado para presentar la estrategia. |
