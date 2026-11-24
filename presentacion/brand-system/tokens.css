@@ -1,0 +1,102 @@
+/* Sinaxys — generated from tokens.json */
+@font-face { font-family: "Sofia Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("fonts/SofiaSans-400.woff2") format("woff2"); }
+@font-face { font-family: "Sofia Sans"; font-weight: 500; font-style: normal; font-display: swap; src: url("fonts/SofiaSans-500.woff2") format("woff2"); }
+@font-face { font-family: "Sofia Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("fonts/SofiaSans-600.woff2") format("woff2"); }
+@font-face { font-family: "Sofia Sans"; font-weight: 700; font-style: normal; font-display: swap; src: url("fonts/SofiaSans-700.woff2") format("woff2"); }
+
+:root, [data-theme="light"] {
+  --primary: #542aef;
+  --primary-deep: #20105b;
+  --primary-glow: #9999ff;
+  --brand-pay: #482ac0;
+  --brand-lime: #ccff73;
+  --brand-cyan: #73faff;
+  --brand-mint: #73ffb7;
+  --brand-yellow: #ffe773;
+  --brand-coral: #ff7373;
+  --brand-chat: #25d366;
+  --background: #ffffff;
+  --foreground: var(--primary-deep);
+  --card: #ffffff;
+  --secondary: var(--neutral-50);
+  --muted: var(--neutral-100);
+  --muted-foreground: var(--neutral-600);
+  --border: var(--neutral-200);
+  --ring: var(--primary);
+  --accent-foreground: var(--primary-deep);
+  --success: #279b65;
+  --destructive: #e23636;
+  --neutral-50: #fafafa;
+  --neutral-100: #f4f4f5;
+  --neutral-200: #e4e4e7;
+  --neutral-300: #d4d4d8;
+  --neutral-400: #a1a1aa;
+  --neutral-500: #71717a;
+  --neutral-600: #52525b;
+  --neutral-700: #3f3f46;
+  --neutral-800: #27272a;
+  --neutral-900: #18181b;
+  --neutral-950: #09090b;
+  --doc-text: #343341;
+  --doc-caption: #686374;
+  --doc-rule: #dad6e5;
+  --doc-row: #f6f4fc;
+  --doc-tint: #f3f0fc;
+  --shadow-card: 0 1px 2px rgba(18, 9, 52, 0.05);
+  --shadow-elev-2: 0 2px 6px rgba(18, 9, 52, 0.06);
+  --shadow-elegant: 0 4px 16px -10px rgba(32, 16, 91, 0.2);
+  --shadow-glow: 0 10px 28px -12px rgba(84, 42, 239, 0.65);
+}
+
+[data-theme="dark"] {
+  --background: var(--primary-deep);
+  --foreground: #fafafa;
+  --card: var(--neutral-900);
+  --secondary: var(--neutral-800);
+  --muted: var(--neutral-800);
+  --muted-foreground: var(--neutral-400);
+  --border: var(--neutral-700);
+  --ring: var(--primary-glow);
+  --accent-foreground: #120934;
+  --destructive: #bb2b2b;
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-3-5: 14px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-10: 40px;
+  --space-16: 64px;
+  --radius-md: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+  --radius-full: 9999px;
+  --font-sans: "Sofia Sans", "Sofia Pro", Arial, Helvetica, sans-serif;
+  --font-doc: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.display { font-family: var(--font-sans); font-size: 40px; line-height: 1.12; font-weight: 700; letter-spacing: -0.025em; }
+.heading-1 { font-family: var(--font-sans); font-size: 36px; line-height: 40px; font-weight: 700; letter-spacing: -0.025em; }
+.heading-2 { font-family: var(--font-sans); font-size: 24px; line-height: 32px; font-weight: 700; letter-spacing: -0.025em; }
+.heading-3 { font-family: var(--font-sans); font-size: 18px; line-height: 28px; font-weight: 700; letter-spacing: -0.025em; }
+.stat { font-family: var(--font-sans); font-size: 48px; line-height: 1; font-weight: 700; }
+.lead { font-family: var(--font-sans); font-size: 20px; line-height: 1.625; font-weight: 400; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 400; }
+.body-sm { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 400; }
+.caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 400; }
+.eyebrow { font-family: var(--font-sans); font-size: 11px; line-height: 16.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+.button { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 600; }
+.button-lg { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 600; }
+.doc-title { font-family: var(--font-doc); font-size: 29px; line-height: 1.2; font-weight: 700; }
+.doc-h1 { font-family: var(--font-doc); font-size: 24px; line-height: 1.25; font-weight: 700; }
+.doc-h2 { font-family: var(--font-doc); font-size: 13px; line-height: 1.35; font-weight: 700; }
+.doc-lead { font-family: var(--font-doc); font-size: 12px; line-height: 1.45; font-weight: 600; }
+.doc-body { font-family: var(--font-doc); font-size: 10.8px; line-height: 1.5; font-weight: 400; }
+.doc-eyebrow { font-family: var(--font-doc); font-size: 8.4px; line-height: 1.4; font-weight: 700; text-transform: uppercase; }
+.doc-footer { font-family: var(--font-doc); font-size: 7.4px; line-height: 1.4; font-weight: 700; text-transform: uppercase; }
