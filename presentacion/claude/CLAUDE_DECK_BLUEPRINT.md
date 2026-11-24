@@ -1,8 +1,8 @@
 # Sinaxys × NOMII — Blueprint de presentación para Claude
 
-> **Propósito:** especificar una presentación visual, editable y basada en la narrativa y los materiales actuales de Sinaxys Brasil, pendiente de revisión de contenido. Este archivo es una propuesta para revisar con el equipo antes de convertirla en un encargo de diseño. Conserva el hilo editorial existente y plantea una posible expansión del bloque Lead-to-Client.
+> **Propósito:** especificar una presentación visual, editable y fiel a la narrativa de Sinaxys Brasil, con contenido que debe validarse antes de publicar o configurar. Este archivo es el contrato de construcción para diseño: conserva el hilo de las láminas existentes, integra el funnel Lead-to-Client y expande el bloque de lifecycle email en cuatro workflows concretos.
 >
-> **Resultado esperado:** una presentación de **52 slides (secuencia propuesta, pendiente de validar)**, 16:9, visual-first, con copy final en **portugués brasileño (PT-BR)**. No crear una presentación corporativa genérica: debe sentirse como una ruta clara y humana para médicos brasileños que evalúan Alemania.
+> **Resultado esperado:** una presentación propuesta de **58 slides**, 16:9, visual-first. La capa estratégica se presenta en español; los guiones, CTA y mockups dirigidos al médico brasileño se conservan en **portugués brasileño (PT-BR)**. No crear una presentación corporativa genérica: debe sentirse como una ruta clara y humana para médicos brasileños que evalúan Alemania.
 
 ---
 
@@ -51,6 +51,20 @@
 
 ### Reglas para Claude
 
+
+### Idioma definitivo — esta regla tiene precedencia
+
+- **La presentación de estrategia se diseña y se expone en español.** Títulos, subtítulos, explicaciones, diagramas, métricas, organigrama, etiquetas de proceso y notas de decisión van en español.
+- **PT-BR queda reservado para guiones y muestras dirigidas al público brasileño:** anuncios, carruseles, guiones de video, CTAs, emails, WhatsApp, formularios y mockups de landing. Siempre deben llevar un rótulo en español: `Ejemplo de guion / mensaje al médico (PT-BR)`.
+- No traducir el deck completo al portugués. Tampoco traducir al español un CTA o copy de campaña que deba evaluarse como experiencia final del médico brasileño.
+- Las menciones anteriores de `Titular PT-BR` en este documento son referencias de copy de campaña; el diseñador debe componer su equivalente explicativo en español en la capa estratégica del deck.
+
+### Assets de Notion — uso obligatorio
+
+- **43 imágenes descargadas** desde la página estratégica están versionadas en [`presentacion/Assets/slides/`](../Assets/slides/).
+- Usar [`README.md`](../Assets/slides/README.md) para la regla de uso y [`asset-manifest.json`](../Assets/slides/asset-manifest.json) para mapear asset, contexto de slide, hash y tamaño.
+- Los assets son referencias de composición y marca. No son una autorización para reutilizar testimonios, rostros, logos o claims fuera del deck aprobado.
+
 - Construir componentes reutilizables: `eyebrow`, `headline`, `body`, `status pill`, `card`, `step`, `CTA button`, `funnel node`, `email card`, `calendar slot`, `pipeline stage`, `metric chip`.
 - Todas las imágenes deben quedar reemplazables y no contener texto rasterizado esencial.
 - Usar animación sólo si la plataforma lo permite y no es requerida para entender la lámina. La presentación debe funcionar estática.
@@ -87,7 +101,7 @@ La presentación se organiza en seis movimientos:
 | III. Convertir interés en caso | 28–39 | ¿Qué ocurre desde el anuncio hasta la conversación de selección? |
 | IV. Email con intención | 40–45 | ¿Qué workflow acompaña cada nivel de decisión? |
 | V. Venta, Customer y aprendizaje | 46–51 | ¿Cómo se preserva el contexto hasta el pago y la mejora? |
-| VI. Decisiones y ejecución | 52 | ¿Qué debe resolverse para operar? |
+| VI. Escala, capacidad y decisión | 52–58 | ¿Qué evidencia, capacidad y decisiones sostienen la operación? |
 
 ---
 
@@ -262,7 +276,7 @@ La presentación se organiza en seis movimientos:
 
 ### 38 — Selección: conversación con criterio
 - **Titular PT-BR:** `A chamada transforma interesse em informação útil.`
-- **Visual:** conversación inicial breve con Setter (el proceso de referencia NOMII dura 5–7 minutos; validar la duración en Sinaxys) con cuatro tarjetas: contexto / motivação / barreiras / próximo passo. Resultados: `MQL`, `nutrição`, `não apto`. Un letrero claro: `Setter não apresenta preço.`
+- **Visual:** llamada Setter de 30 min como hipótesis inicial medible, con cuatro tarjetas: contexto / motivação / barreiras / próximo passo. Resultados: `MQL`, `nutrição`, `não apto`. Un letrero claro: `Setter não apresenta preço.`
 
 ### 39 — Lifecycle email: no es newsletter
 - **Titular PT-BR:** `Cada mensagem aparece quando ajuda a avançar.`
@@ -273,7 +287,7 @@ La presentación se organiza en seis movimientos:
 
 ## 5. Bloque expandido de email: cuatro workflows a construir
 
-> **Estructura:** los cuatro workflows, sus cantidades, cadencias y reglas de salida son hipótesis para discutir; no provienen de una auditoría verificada de automatizaciones activas ni constituyen una decisión de configuración. Antes de publicar, cada asunto, consentimiento, idioma, remitente, timing y condición de salida debe pasar revisión comercial, legal y operativa.
+> **Estructura:** una revisión de solo lectura identificó workflows HubSpot con estas escalas de emails; la traducción a Sinaxys Brasil y su configuración futura siguen siendo una propuesta de deck, no una automatización aprobada. Antes de publicar, cada asunto, consentimiento, idioma, remitente, timing y condición de salida debe pasar revisión comercial, legal y operativa.
 
 ### 40 — Workflow 1: Descarga de guía
 - **Eyebrow:** `EMAIL LIFECYCLE · 01 / 04`
@@ -357,7 +371,7 @@ La presentación se organiza en seis movimientos:
 ### 45 — Traspaso a ventas: el contexto viaja
 - **Titular PT-BR:** `O Closer recebe uma oportunidade, não um lead frio.`
 - **Visual:** dossier/memoria de conversación pasa del Setter al Closer. Campos visibles: origem, motivação, barreiras, idioma, horizonte, minuta y próximo passo.
-- **Regla:** Propuesta por validar con Elías: después de la conversación inicial, derivar al Closer sólo los perfiles que cumplan los criterios acordados; definir en HubSpot cuándo se crea SQL/Deal y si se admite una ruta directa.
+- **Regla:** agenda Closer creada durante/desde Setter = SQL y Deal. Ningún prospecto salta directamente desde formulario a Closer.
 
 ### 46 — Venta: decisión y seguimiento
 - **Titular PT-BR:** `A venda continua um processo que já tem contexto.`
@@ -378,7 +392,7 @@ La presentación se organiza en seis movimientos:
 
 ### 50 — Identidad de datos: una cadena verificable
 - **Titular PT-BR:** `Cada etapa deixa uma evidência conectada.`
-- **Visual:** modelo de identidad horizontal: email normalizado + HubSpot Contact ID + UTM/fonte + formulário + Cal booking ID + meeting/ticket + Deal + contrato + ID de cliente/pago del proveedor que confirme Sinaxys (por definir).
+- **Visual:** modelo de identidad horizontal: email normalizado + HubSpot Contact ID + UTM/fonte + formulário + Cal booking ID + meeting/ticket + Deal + contrato + Stripe customer/payment ID (o identificador del proveedor de pago que Sinaxys confirme).
 - **Regla:** el dashboard no debe inventar relaciones; debe usar claves persistentes y estados verificables.
 
 ### 51 — Operación: una arquitectura compartida
@@ -388,18 +402,43 @@ La presentación se organiza en seis movimientos:
   - **Sinaxys:** atención humana, Setter, Closer, propuesta, contrato, cobro y onboarding.
 - **Pie:** `Tecnologia coordena; pessoas decidem.`
 
-### V. Cierre: decisiones y ejecución
+### V. Escala, capacidad y decisión
 
-### 52 — Roadmap, inversión y decisiones de dirección
-- **Titular PT-BR:** `A estratégia só ganha tração quando a operação consegue sustentá-la.`
-- **Visual:** cuadro final con tres horizontes: preparar / lanzar / aprender. A la derecha, decisiones requeridas:
-  1. voceros y aprobación PT-BR;
-  2. oferta y límites comerciales/legalmente revisados;
-  3. dominio/remitente/consentimiento y herramientas;
-  4. capacidad de Setter y Closer;
-  5. inversión de prueba y criterio de escala;
-  6. owners operativos de Sinaxys.
-- **Cierre oral PT-BR:** `A pergunta não é apenas quantos leads vamos gerar. É qual caminho vamos construir para que a pessoa certa avance com clareza.`
+### 52 — Roadmap de instalación y aprendizaje
+- **Titular de slide (ES):** `Instalar, probar, aprender y ajustar.`
+- **Contenido visible:** diciembre semana 1–4, enero y febrero como cronología operativa. Incluir la evidencia esperada en cada corte: postulación trazable, MQL, reuniones, propuestas y primeros pagos.
+- **Visual:** timeline horizontal de tres meses con evidencias bajo cada hito.
+
+### 53 — Medios: qué sabemos y qué debe validarse
+- **Titular de slide (ES):** `Una referencia no es todavía una proyección.`
+- **Contenido visible:** 70–80 leads mensuales como referencia histórica discutida; aproximadamente 100 leads clasificados para enero y aspiración de 10 clientes como escenario de mesa, no como meta comprometida.
+- **Visual:** tres bloques `referencia histórica / hipótesis de escenario / dato pendiente de validar` con una banda de fuentes Chile–regional–Brasil.
+
+### 54 — Métricas y ecuación de capacidad
+- **Titular de slide (ES):** `Cada mejora debe verse en la cohorte, no sólo en el volumen.`
+- **Contenido visible:** `MQL × tasa de agenda × tasa de asistencia × tasa de cierre sobre reuniones asistidas`; escenario ilustrativo 100 MQL → 10 clientes = 10 % MQL a Customer.
+- **Visual:** ecuación grande + funnel medible + chips de tiempo: postulación → primer contacto → reunión → primer pago.
+
+### 55 — Inversión: prueba de diciembre, captación sostenida en enero
+- **Titular de slide (ES):** `Invertir más sólo cuando la señal justifica escalar.`
+- **Contenido visible:** tres objetivos: adquirir audiencia, adquirir leads y convertir interés en reuniones. Para cada uno mostrar objetivo diciembre, foco enero y métrica de decisión. Los montos quedan `Por dimensionar / Por acordar` hasta revisión de Edward.
+- **Visual:** matriz de tres filas × cuatro columnas, con celdas editables de inversión y moneda.
+
+### 56 — Organigrama de trabajo y capacidad
+- **Titular de slide (ES):** `Una estrategia sólo funciona si cada responsabilidad tiene capacidad real.`
+- **Contenido visible:** equipo de implementación NOMII: Natalia comunicación 20 h/semana; Edward growth y medios 16 h; Elías datos e integración 16 h; diseño gráfico 20 h. Base = 72 h/semana. La tabla histórica de Notion agregaba Setter de selección 20 h y totalizaba 92 h, pero esa capacidad debe reasignarse a Sinaxys según la decisión vigente de ownership.
+- **Visual:** organigrama con dos columnas: NOMII (estrategia, contenido, medios, datos, diseño, capacitación) y Sinaxys (Setter, Closer, ventas, contratos, cobros, onboarding). Mostrar una línea de coordinación, no jerarquía entre compañías.
+
+### 57 — Dependencias y decisiones operativas
+- **Titular de slide (ES):** `La operación se bloquea donde faltan dueño, permiso o capacidad.`
+- **Contenido visible:** PT-BR reviewer, voceros, video, cuenta de Instagram, cambios web, cobertura, presupuesto, capacidad comercial, dominio/remitente, consentimientos, cupos/licencias y dueños de cuentas.
+- **Visual:** tablero de decisión con columnas `decisión / qué destraba / owner / estado`.
+
+### 58 — Cierre de dirección
+- **Titular de slide (ES):** `No se trata sólo de generar leads. Se trata de construir un camino claro para la persona correcta.`
+- **Contenido visible:** volver al primer anuncio, explicar público, mensaje, señal de avance y responsable que actúa sobre ella.
+- **Visual:** loop que conecta primer anuncio → datos → conversación → Customer → aprendizaje → siguiente pieza.
+- **Cierre oral PT-BR — guion, no texto del deck:** `A pergunta não é apenas quantos leads vamos gerar. É qual caminho vamos construir para que a pessoa certa avance com clareza.`
 
 ---
 
@@ -437,12 +476,604 @@ La presentación se organiza en seis movimientos:
 ## 7. Fuentes de construcción
 
 - Página estratégica Sinaxys en Notion: secuencia de slides 01–44 y referencias visuales existentes.
-- Hipótesis de workflows para HubSpot (no constituye auditoría ni confirma configuraciones activas):
+- Revisión de solo lectura de workflows HubSpot: escalas de referencia identificadas para el bloque de marketing automation; la configuración futura de Sinaxys requiere aprobación:
   - Descarga de guía: 5 emails.
   - TOFU Lead Gen: 12 emails.
   - MOFU Agenda: 8 emails.
   - BOFU Testimonios / Agenda: 9 emails.
-- Arquitectura operativa propuesta para el funnel Lead-to-Client; requiere validación de Sinaxys y Elías.
+- Arquitectura operativa del funnel Lead-to-Client documentada para Sinaxys Brasil.
 - Propuesta comercial preliminar del Método ZAI para frecuencia de canales, inversión y roadmap.
 
-> **Nota de implementación:** este blueprint propone contenido y flujos futuros, pendientes de aprobación. No documenta sistemas activos ni autoriza envíos, automatizaciones, routing, pipelines, cobros o comunicaciones.
+> **Nota de implementación:** este blueprint describe una propuesta de presentación y configuración futura. No activa envíos, automatizaciones, calendar routing, pipelines, cobros ni comunicaciones.
+
+## 8. Contrato literal de textos provenientes de Notion
+
+> **Uso obligatorio.** Los textos de este anexo son los textos propuestos que ya existen en Notion. Claude debe incorporarlos como copy visible en la slide indicada, no degradarlos a notas de speaker. Si un texto es un guion, anuncio, CTA, correo o mensaje dirigido al médico, se conserva en **PT-BR** dentro del mockup/asset. Si explica la estrategia a Sinaxys, se compone en **español**.
+
+> **Precedencia de ownership.** Esta exportación conserva textos históricos tal como fueron redactados. La decisión más reciente de Sirius tiene precedencia: NOMII no atiende leads como Setter ni Closer; Sinaxys ejecuta la atención humana, selección, venta, cobro y onboarding. Cuando aparezca un texto anterior que atribuya ejecución humana a NOMII, debe representarse como antecedente y ajustarse a la arquitectura vigente, no implementarse literalmente.
+
+### Fuente Notion · Slide 1: Portada
+
+_No había copy textual adicional en el bloque; usar el título y el asset asociado como dirección visual._
+
+### Fuente Notion · Slide 2:
+
+[este txt más pequeño] Alemania puede despertar el interés.
+[este txt en grande] Un camino claro
+permite imaginarse ahí.
+[Y debajo, más pequeño:]
+Sinaxys y NOMII se unen para conectar esa posibilidad con una ruta de preparación y acompañamiento basada en el Método ZAI.
+
+[Referencia o idea visual de la slide]
+
+### Fuente Notion · Slide 3:
+
+El crecimiento empieza con decisiones.
+Para la bajada metodológica de esta estrategia, tomamos como referencia Strategy Choice Cascade, utilizado por IDEO U. Este marco conecta las decisiones esenciales del negocio y permite visualizar y compartir una dirección común para la comunicación y la operación.
+| Decisión | Aplicación a Sinaxys |
+| ¿Qué queremos lograr? | Convertir el interés en postulaciones calificadas y clientes. |
+| ¿Dónde vamos a competir? | Brasil: médicos que exploran, evalúan o deciden su carrera en Alemania. |
+| ¿Cómo nos diferenciaremos? | El vínculo local de Sinaxys junto al Método ZAI y la experiencia de NOMII. |
+| ¿Qué necesitamos hacer bien? | Contenido en portugués, captación, selección y venta consultiva. |
+| ¿Cómo sostendremos la operación? | HubSpot y Notion: responsables, seguimiento, medición y aprendizaje. |
+Investigar, probar, aprender y ajustar.
+Idea visual de la slide:
+
+### Fuente Notion · Slide 4:
+
+Antetítulo
+LANZAMIENTO · 3 SEMANAS
+Título
+Una nueva etapa.
+Un camino más claro.
+Bajada
+Presentar la alianza, explicar el Método ZAI y mostrar a las personas que acompañan el proceso.
+Focos
+Nueva etapa · Método ZAI · Personas
+Concepto comunicacional
+Sua carreira médica na Alemanha começa antes da viagem.
+[referencia visual de la slide]
+
+### Fuente Notion · Slide 5
+
+Antetítulo
+PIEZA DE APERTURA · PROPUESTA
+Título
+La alianza empieza con una conversación.
+Bajada
+Nicolás Orbenes y Luca, juntos en Alemania.
+Texto dentro del reproductor
+Sinaxys + Método ZAI by NOMII
+Capítulos dentro del reproductor
+01 · Por qué nos unimos
+02 · Qué aporta cada equipo
+03 · Qué significa prepararse
+04 · Cómo acompañamos el camino
+Título lateral
+Una grabación, varias piezas
+Distribución
+YouTube · Conversación principal
+Instagram y TikTok · Corte breve
+Meta Ads · Versiones con hooks propios
+Frase inferior
+Uma nova etapa na Sinaxys. Um caminho construído com a experiência da NOMII.
+Nota pequeña
+Duración orientativa: YouTube 6–8 min · Versión breve 45–60 s.
+[referencia visual de la slide]
+
+### Fuente Notion · Slide 6:
+
+Título
+Tres semanas. Una misma conversación.
+Bajada
+Instagram como eje. Distribución y adaptación según el formato.
+| Formato | Semana 1 | Semana 2 | Semana 3 |
+| Reel | Por que nos unimos? | O que significa ser acompanhado? | As dúvidas que queremos responder |
+| Carrusel | O que muda nesta nova etapa? | Quem faz o quê no seu caminho? | Do Brasil à Alemanha: as etapas |
+| Reel | Preparar-se vai além do idioma | Alemão médico na prática | Uma experiência real da NOMII |
+| Carrusel | Alemanha além do hospital | Sua vida também faz parte do plano | Onde você quer construir sua carreira? |
+Distribución — texto inferior
+Instagram + Facebook · Reels adaptados a TikTok y Shorts · Versiones extensas en YouTube.
+Frecuencias — texto pequeño
+Feed: 2 reels + 2 carruseles por semana.
+Stories: 2 entregas por semana.
+[referencia visual de la slide]
+
+### Fuente Notion · Slide 7A:
+
+Título
+Una campaña conectada.
+Bajada
+Del contenido al seguimiento, cada punto de contacto tiene una función.
+Textos del framework
+| Bloque | Descripción |
+| Orgánico | Comprender y confiar. |
+| Meta Ads | Explorar y postular. |
+| Web / landing médica | Alianza · Etapas · Requisitos. |
+| Formulario + HubSpot | Perfil · Origen · Siguiente paso. |
+| Selección y seguimiento | Email y WhatsApp según el estado del contacto. |
+Frase inferior
+Cada contacto conserva su origen, su contexto y su siguiente paso.
+Nota pequeña
+Pauta activa con formulario, CRM y atención operativos.
+[referencia visual de la slide]
+
+### Fuente Notion · Slide 7B
+
+Título
+El ritmo de producción del lanzamiento.
+Bajada
+Tres semanas · Las réplicas aprovechan el material principal.
+Columna izquierda: CONTENIDO Y DISTRIBUCIÓN
+Instagram
+2 reels + 2 carruseles por semana.
+12 publicaciones de feed en total.
+Facebook
+Réplica del feed: 12 publicaciones.
+Stories de Instagram
+2 entregas semanales · 6 en total.
+TikTok
+2 reels reutilizados por semana · 6 en total.
+Columna derecha: PROFUNDIDAD Y CAPTACIÓN
+YouTube
+2 videos principales + 6 shorts en total.
+Meta Ads
+Mínimo 5 creativos nuevos por semana.
+15 en total · Distribución inicial semanal: 2 TOFU + 2 MOFU + 1 BOFU.
+Web, email y WhatsApp
+1 landing médica y flujos según el estado del contacto.
+Nota pequeña
+Los flujos de email y WhatsApp se dimensionan por disparador, no como publicaciones semanales.
+[referencia visual de la slide]
+
+### Fuente Notion · Slide 8:
+
+Título
+Cómo entender esta nueva etapa
+Bajada
+Ejemplo de carrusel · Instagram y Facebook · Semana 1.
+Pieza 1
+O que muda nesta nova etapa?
+Sinaxys + Método ZAI by NOMII.
+Pieza 2
+Duas experiências.
+Um caminho conectado.
+Sinaxys no Brasil.
+Método ZAI da NOMII.
+Pieza 3
+Antes da viagem,
+existe preparação.
+Idioma. Documentação.
+Preparação para o reconhecimento profissional.
+Pieza 4
+O próximo passo
+é entender o caminho.
+Acompanhe esta nova etapa.
+Caption propuesto
+Uma nova etapa começa na Sinaxys International. Em parceria com a NOMII, incorporamos o Método ZAI, criado pelo Dr. Nicolás Orbenes, ao nosso programa médico. Nas próximas semanas, vamos mostrar a preparação, as pessoas e as exigências desse caminho.
+[referencia visual de slide]
+Slide 9:
+Título
+El acompañamiento se entiende mejor cuando alguien lo cuenta.
+Bajada
+Experiencia real de NOMII · Adaptación para el lanzamiento de Sinaxys.
+Texto de referencia dentro del video
+Eu queria alguém que me orientasse.
+Identificación
+Marisol · Médica equatoriana.
+Experiência de acompanhamento da NOMII.
+Nota bajo el video
+Subtitulación propuesta en portugués.
+Título lateral
+Lo que esta pieza debe mostrar.
+Puntos
+- La preocupación antes de comenzar.
+- El apoyo concreto durante la preparación.
+- La persona detrás del proyecto profesional.
+Caption propuesto
+Antes de começar, Marisol tinha uma preocupação: como organizar tudo sem enfrentar o processo sozinha? Ela compartilha sua experiência com a NOMII, empresa que desenvolveu o Método ZAI e agora se une à Sinaxys no Brasil. Uma história para conhecer o lado humano dessa preparação.
+Aclaración
+El caso conserva su origen: NOMII.
+Distribución — texto pequeño
+Instagram + Facebook · TikTok · Fragmentos para YouTube Shorts.
+[refernecia visual de la slide]
+
+### Fuente Notion · Slide 10:
+
+Antetítulo
+MANUAL DE MARCA · LÍNEA MÉDICA
+Título
+Una alianza.
+Un marco común para comunicar.
+Bajada
+Toda comunicación sobre el Método ZAI, el proceso y la experiencia de NOMII debe seguir el manual de la alianza.
+Autoría reconocible
+El Método ZAI se identifica como metodología de NOMII.
+Testimonios con contexto
+Los casos de NOMII conservan su origen, contexto y etapa real.
+Mensajes consistentes y respaldados
+Proceso, servicios y condiciones deben coincidir con la oferta vigente.
+Texto pequeño
+Mismo criterio en redes, web, anuncios, mailings y materiales comerciales.
+Enlace discreto al pie
+Consultar manual completo en Notion ↗
+[referencia visual]
+Slide 11:
+Investigación propia NOMII
+Cada decisión tiene una motivación
+Nuestro estudio interno explora qué buscan los clientes, qué les preocupa y qué necesitan para confiar.
+Ambicioso profesional
+Busca especializarse, crecer y superar límites en su trayectoria.
+Proyecta en familia
+Evalúa el bienestar y la viabilidad del proyecto familiar.
+Migrante por seguridad
+Busca ejercer y vivir con mayor tranquilidad.
+Un aprendizaje transversal: claridad, acompañamiento y respaldo verificable.
+Estos aprendizajes orientan el punto de partida; no representan una segmentación validada de Brasil.
+[Referencia visual slide[
+
+### Fuente Notion · Slide 12
+
+Los perfiles se afinan con personas reales.
+Durante los primeros meses, contrastaremos las hipótesis con postulaciones, conversaciones y decisiones de clientes de Sinaxys.
+Probar mensajes
+Motivaciones y objeciones.
+Escuchar en selección
+Interés, requisitos y disposición para comenzar.
+Contrastar con clientes
+Qué influyó en su decisión y qué necesitaron resolver.
+Ajustar la comunicación
+Actualizar perfiles, mensajes y contenidos con lo aprendido.
+HubSpot conectará el origen del contacto con su motivación y avance comercial.
+Evaluaremos postulaciones calificadas, reuniones realizadas y avance hacia clientes.
+[referencia visual de slide]
+
+### Fuente Notion · Lámina de transición
+
+Cómo llevamos todo lo que hemos revisado hasta ahora a la comunicación concreta por canal
+
+### Fuente Notion · Slide 15
+
+Imaginar el futuro.Entender el camino.
+Cinco pilares para despertar interés, orientar y construir confianza.
+Carrera médica en Alemania
+Ejercicio profesional, especialización y oportunidades, con sus condiciones y exigencias.
+Vida en Alemania
+Adaptación, vivienda, costo de vida, cultura y familia.
+Preparación y homologación
+Idioma, documentación, etapas y exámenes explicados con claridad.
+Experiencias y personas
+Vivencias, dificultades, aprendizajes y avances de médicos y equipos.
+Metodología y acompañamiento
+Cómo se organiza la preparación con Sinaxys y el Método ZAI de NOMII.
+[referencia visual de la slide]
+
+### Fuente Notion · Slide 16
+
+Carrera médica en Alemania
+Objetivo del pilar
+Explorar el ejercicio profesional, la formación especializada y las oportunidades en Alemania, con sus condiciones y exigencias.
+Qué comunicaremos
+Especialización y desarrollo · Rutina y entorno clínico · Remuneración y condiciones laborales · Oportunidades y requisitos.
+[referencia visual slide]
+
+### Fuente Notion · Slide 17
+
+Vida en Alemania
+Objetivo del pilar
+Acercar la vida cotidiana en Alemania, mostrando las posibilidades y los desafíos de adaptarse y construir un proyecto personal o familiar.
+Qué comunicaremos
+Vivienda y costo de vida · Cultura y adaptación
+Vida cotidiana y tiempo libre · Pareja y familia
+[referencia visual slide]
+
+### Fuente Notion · Slide 18
+
+Preparación y homologación
+Objetivo del pilar
+Explicar el camino para ejercer en Alemania, haciendo comprensibles sus etapas, requisitos y exigencias de preparación.
+Qué comunicaremos
+Alemán general y médico · Documentación y trámites
+Etapas y exámenes · Preparación y planificación
+[referencia visual slide]
+
+### Fuente Notion · SLIDE 19
+
+Experiencias y personas
+Objetivo del pilar
+Mostrar el lado humano del proceso a través de vivencias, dificultades, aprendizajes y avances reales de médicos y equipos.
+Qué comunicaremos
+Testimonios con contexto · Desafíos y aprendizajes
+Avances del proceso · Personas detrás del acompañamiento
+[referencia visual slide]
+SLIDE 20
+Metodología y acompañamiento
+Objetivo del pilar
+Hacer visible cómo se organiza la preparación con el Método ZAI de NOMII y cómo se articula el acompañamiento junto a Sinaxys.
+Qué comunicaremos
+Método ZAI y etapas de preparación · Equipos y responsabilidades
+Acompañamiento en origen y destino · Alcances y límites del programa
+[referencia visual slide]
+
+### Fuente Notion · SLIDE 21:
+
+Instagram · Base semanal
+2 reels + 2 carruseles + 2 historias.
+Distribución del contenido
+- Facebook: espejo de Instagram.
+- TikTok + YouTube Shorts: los mismos 2 videos cortos por semana.
+- YouTube largo: 1 testimonio largo de NOMII al mes. En los próximos meses se evaluará producir contenido largo recurrente.
+- LinkedIn: mantener su enfoque y alinear descripción e idioma.
+[referencia visual slide]
+
+### Fuente Notion · Slide 22
+
+El perfil también explica la propuesta.
+Instagram
+Perfil médico diferenciado de enfermería.
+Bio clara · Fijados de orientación · Destacados del proceso.
+YouTube
+Descripción centrada en médicos brasileños y el Método ZAI de NOMII.
+Palabras clave en portugués · Listas por tema · Testimonios con contexto.
+LinkedIn
+Mantener el enfoque corporativo y explicar la alianza en la descripción.
+Portugués como base · Alemán con traducción cuando el destinatario lo requiera.
+[referencia visual slide]
+[Slide de transición]
+DE ORGÁNICO A PAID MEDIA
+La confianza abre la conversación.
+La pauta invita
+a dar el siguiente paso.
+Meta Ads · De la atención a la postulación calificada.
+
+### Fuente Notion · Slide 23
+
+De descubrir Alemania a dar el siguiente paso.
+TOFU · Descubrimiento
+Dar a conocer Sinaxys y abrir la posibilidad.
+Acercar Alemania a quienes aún no la consideran, con información de valor sobre carrera y vida en el país.
+MOFU · Consideración
+Construir comprensión y confianza.
+Explicar el Método ZAI de NOMII, el proceso y el alcance del acompañamiento.
+BOFU · Conversión
+Generar postulaciones calificadas.
+Aclarar requisitos y facilitar la evaluación del perfil y su disposición para comenzar con CTAs que dirigen directamente a la postulación del programa.
+
+### Fuente Notion · Slide 23A · Momentos de decisión
+
+Antetítulo · VIAJE DEL MÉDICO · BRASIL
+Título · ¿Cómo decide un médico si Alemania encaja en su proyecto de vida?
+Bajada · En Brasil, cada médico puede entrar en un momento distinto. Sinaxys adapta el mensaje del Método ZAI a la pregunta que trae.
+| Momento | Pregunta del médico | Punto de contacto | Qué muestra Sinaxys | CTA en PT-BR |
+| Descubrir | Será que eu me imagino trabalhando na Alemanha? | Reel de Instagram o anuncio de Meta | Un médico cuenta cómo es su rutina en Alemania y qué le hizo dar el primer paso. | Conhecer a rotina médica |
+| Explorar | O que preciso preparar ainda no Brasil? | Carrusel o YouTube → web médica | El Método ZAI de NOMII ordena el idioma, la documentación y las etapas de preparación. | Ver etapas e requisitos |
+| Evaluar | Esse caminho faz sentido para mim e para a minha família? | Testimonio de NOMII + requisitos en la landing | Un caso real muestra qué apoyo recibió la médica, qué resolvió ella y cómo afectó a su familia. | Conhecer uma experiência real |
+| Decidir | Quero começar. Meu perfil se encaixa no programa? | Remarketing o visita directa → formulario | Sinaxys explica los criterios y qué ocurrirá al enviar la postulación. | Candidate-se ao programa |
+Cómo leer el mapa · La consideración tiene dos movimientos: explorar posibilidades y evaluar si encajan. Una médica puede consultar los requisitos, conversar con su familia y volver a un testimonio antes de decidir. Quien ya tomó la decisión puede ir directo al formulario.
+Referencia visual de la slide
+Base metodológica · The Messy Middle · Google · Journey Mapping 101 · Nielsen Norman Group. Adaptación a la postulación médica, con carrera profesional y proyecto familiar como hipótesis de partida para Brasil.
+
+### Fuente Notion · Slide 24
+
+Producir para aprender
+Mínimo 5 creativos nuevos por semana, probando variaciones de hook, propuesta y formato. La distribución entre etapas se ajustará según los resultados.
+
+### Fuente Notion · Slide 25
+
+TOFU — Descubrimiento
+Reconocimiento de Sinaxys e información de valor para descubrir Alemania.
+- Reel: “E se a Alemanha entrasse nos seus planos?”
+- Carrusel: “O salário é só uma parte da conta.”
+- Video: “5 coisas que você precisa saber se quer se especializar como médico na Alemanha”
+
+### Fuente Notion · Slide 26
+
+MOFU — Consideración
+Dar claridad sobre el programa y construir confianza en el acompañamiento.
+- Video: “Antes da passagem, existe um plano.”
+- Carrusel: “O que o programa faz. E o que depende de você.”
+- Testimonio NOMII: “O que eu gostaria de ter sabido antes de começar.”
+
+### Fuente Notion · Slide 27·
+
+BOFU — Conversión
+Invitar a postular al programa y evaluar el encaje del médico.
+- Video: “Quer começar nos próximos três meses? Vamos avaliar seu perfil.”
+- Carrusel: “Seu plano combina com o programa?”
+- Pieza estática: “O próximo passo é apresentar o seu projeto.”
+CTA de BOFU: “Candidate-se ao programa.”
+Destino directo: formulario de postulación.
+
+### Fuente Notion · Slide 28 ·
+
+De paid media a la web
+El anuncio despierta el interés.
+La web convierte esa curiosidad
+en una decisión informada.
+Una experiencia clara para entender la propuesta y dar el siguiente paso.
+
+### Fuente Notion · Slide 29 ·
+
+Cada visita necesita un camino claro.
+La web debe orientar al público correcto, explicar el programa y facilitar una postulación informada.
+Orientar · Una entrada por perfil
+Médicos, enfermería e instituciones con recorridos diferenciados.
+Explicar · Una oferta médica clara
+Método ZAI de NOMII, etapas, requisitos y alcance del acompañamiento.
+Conectar · Un siguiente paso coherente
+Postulación, evaluación y seguimiento comercial.
+Actualizaremos la experiencia existente para alinearla con la alianza.
+
+### Fuente Notion · Slide 30
+
+El recorrido empieza por su perfil.
+Subir las tarjetas existentes al primer bloque de la portada.
+Médicos · Enfermería · Instituciones
+Los anuncios médicos llegan directamente a la página médica.
+Textos del mockup
+> Conectamos profissionais de saúde e instituições entre Brasil e Alemanha.
+Encontre as informações para o seu perfil.
+| Tarjeta | Descripción | CTA |
+| Sou médico(a) | Preparação para sua carreira na Alemanha. | Conhecer o programa médico |
+| Sou profissional de enfermagem | Um caminho dedicado à sua profissão. | Conhecer o programa de enfermagem |
+| Represento uma instituição | Conexões para equipes de saúde. | Conhecer as soluções |
+
+### Fuente Notion · Slide 31
+
+El diferencial, desde el inicio.
+Contrato de trabajo asegurado desde el primer día en Alemania.
+Respaldo documental del ministerio alemán — BMAS.
+La comunicación debe reflejar el alcance de la documentación institucional.
+Textos del mockup
+> SINAXYS × NOMII
+Prepare sua carreira médica. Chegue à Alemanha com contrato de trabalho.
+Com o Método ZAI da NOMII, sua preparação conecta idioma, reconhecimento do diploma e inserção profissional.
+✓ Contrato desde o primeiro dia na Alemanha
+✓ Base institucional documentada · BMAS
+Enlace: Conheça a documentação
+CTA: Candidate-se ao programa
+A candidatura inicia uma avaliação do seu perfil.
+
+### Fuente Notion · Slide 32
+
+Una ruta compartida con NOMII.
+Preparación en Brasil.
+Integración en Alemania.
+Mismos hitos del Método ZAI, adaptados al público brasileño.
+Sin plazos fijos ni una ruta paralela al programa.
+Textos del mockup
+> MÉTODO ZAI DA NOMII
+Um caminho que começa no Brasil e continua na Alemanha.
+Preparação e integração em duas fases conectadas.
+FASE BRASIL · Preparação antes da viagem
+- Alemão A1–B2: Lingoda + especialistas NOMII.
+- Documentos para reconhecimento do diploma e visto.
+- Gestão do contrato de trabalho.
+- Preparação de moradia, seguros e viagem.
+FASE ALEMANHA · Integração e reconhecimento profissional
+- Chegada com contrato de trabalho.
+- Preparação e aprovação na FSP.
+- Atuação clínica com Berufserlaubnis.
+- Preparação e aprovação na KP.
+- Approbation e acesso à especialização.
+> O avanço depende da preparação individual, das aprovações exigidas e dos trâmites aplicáveis.
+CTA: Conheça os requisitos do programa.
+
+### Fuente Notion · Slide 33
+
+Cifras que debemos corregir o validar.
+La web debe distinguir datos actuales, proyecciones e ingresos según etapa.
+| Dato publicado | Qué falta precisar | Fuente de contraste |
+| 50.000 médicos faltantes | La proyección del Zi contempla un déficit acumulado hasta 2040; no equivale a vacantes actuales. | Zi · Proyección 2024 |
+| 10.997 médicos de familia | Sin fuente identificada: confirmar indicador y fecha antes de mantenerlo. | KBV · Por verificar |
+| 50% se jubila en diez años | Validar población, año base y horizonte temporal. | KBV / Bundesärztekammer |
+| Salarios hospitalarios | Usar categoría, antigüedad y salario base bruto del convenio vigente. | TV-Ärzte/VKA · Marburger Bund |
+| 20.000–30.000 € en consulta propia | No presentarlo como salario de convenio; distinguir ingresos, gastos y beneficio. | Zi-Praxis-Panel |
+Referencia VKA: Arzt, 5.722,05–7.355,29 € brutos mensuales, según antigüedad. Vigencia: junio–diciembre de 2026.
+
+### Fuente Notion · Slide 34 · Lead to Client Funnel · transición
+
+El interés abre una puerta. El sistema acompaña el siguiente paso.
+Del clic al inicio del programa: una ruta continua, con contexto y una decisión posible en cada etapa.
+
+### Fuente Notion · Slide 35 · Postulación · del clic al caso trazable
+
+Cada postulación abre un caso, no solo un formulario.
+Origen de campaña, perfil, Contacto, Ticket y agenda Setter quedan conectados desde el primer paso.
+
+### Fuente Notion · Slide 36 · Postulación · criterio y conversación
+
+El formulario orienta. La selección confirma.
+Edad, formación, país, horizonte y capacidad de ahorro preparan la conversación; el criterio humano define la ruta.
+
+### Fuente Notion · Slide 37 · Cal · agenda y routing
+
+La agenda distribuye oportunidad, no solo horarios.
+Disponibilidad sincronizada, round-robin de Setters y un reagendamiento permitido conservan trazabilidad y flexibilidad.
+
+### Fuente Notion · Slide 38 · Selección · conversación con criterio
+
+La llamada convierte interés en información útil.
+La asistencia marca MQL. El Setter perfila, explica el camino y define SQL, nutrición o no aptitud; no comunica precio.
+
+### Fuente Notion · Slide 39 · Email · lifecycle, no newsletter
+
+Cada mensaje aparece cuando ayuda a avanzar.
+HubSpot coordina CTAs, secuencias y exclusiones según la etapa; no se superponen TOFU, MOFU y BOFU.
+
+### Fuente Notion · Slide 40 · Traspaso a ventas · contexto preservado
+
+El Closer recibe una oportunidad, no un lead frío.
+La agenda de Closer crea SQL y Deal; origen, motivación, barreras, notas y próximo paso viajan con la minuta.
+
+### Fuente Notion · Slide 41 · Venta · decisión y seguimiento
+
+La venta continúa un proceso que ya tiene contexto.
+El pipeline de Sinaxys Brasil ordena conversación, seguimiento, contrato, firma, pago y motivo de pausa o pérdida.
+
+### Fuente Notion · Slide 42 · Customer · evidencia de compromiso
+
+Cliente no es una intención. Es un compromiso verificable.
+Contrato firmado más primer pago recibido activa Customer en HubSpot y el onboarding correspondiente.
+
+### Fuente Notion · Slide 43 · Medición · aprender hasta Customer
+
+No optimizamos formularios. Optimizamos clientes.
+Cada cohorte conecta fuente, postulación, MQL, Deal y primer pago para decidir qué mejorar y dónde intervenir.
+
+
+## 9. Métricas, medios y contenido que debe quedar visible
+
+### Métricas de negocio y atribución
+
+| Pregunta de dirección | Definición que debe aparecer en el deck | Fórmula / evidencia |
+|---|---|---|
+| ¿Cuántos médicos postulan? | Primeras postulaciones únicas atribuibles a pauta. | Total de postulaciones únicas; promedio mensual = total ÷ seis. |
+| ¿Cuánto cuesta cada postulación? | Costo por postulación atribuible a Meta. | Inversión Meta ÷ postulaciones únicas atribuibles a Meta. |
+| ¿Cuánto cuesta un ticket de selección? | Costo por postulante que alcanza etapa de selección. | Inversión Meta ÷ postulantes únicos atribuibles a Meta que alcanzaron selección. |
+| ¿Cuántos llegan a Customer? | Médicos con contrato firmado y primer pago; unidos a cohorte de primera postulación. | Fynk + HubSpot + identidad persistente. |
+
+### Comparaciones que se deben mostrar con etiqueta de alcance
+
+- **Chile por vía de entrada:** formulario nativo, landing u otra vía identificada; mostrar postulaciones, seleccionados, clientes y costo cuando el gasto sea asignable.
+- **Chile y otros cuatro mercados:** inversión, postulaciones, promedio mensual, seleccionados, costo por seleccionado y clientes por país.
+- **Referencia para Brasil:** comparar la vía prevista para Sinaxys con la equivalente de Chile y con el resultado regional ponderado; no inferir equivalencia automática.
+- **Datos públicos sensibles:** separar déficit proyectado, vacantes actuales, salarios de convenio e ingresos de consulta; los textos de fuente pendientes se presentan como `por validar`, no como promesas.
+
+### Frecuencias por canal que Claude debe representar
+
+| Canal | Lanzamiento | Ritmo posterior | Señal que importa |
+|---|---|---|---|
+| Instagram | 6 reels, 6 carruseles y 6 entregas de stories en tres semanas | 3 piezas de feed por semana | retención, consultas pertinentes, visitas landing |
+| Facebook | 12 publicaciones replicadas en tres semanas | distribución espejo | visitas y preguntas derivadas |
+| YouTube | 2 videos principales (semana 1 y 3) + 6 shorts | 1 video principal quincenal + 2 shorts semanales | retención y paso al perfil médico |
+| TikTok | hasta 6 reels reutilizados | según programación | visualizaciones con retención y visitas perfil |
+| Meta Ads | mínimo 5 creativos por semana; al menos 15 en lanzamiento | iteración por resultados | costo por MQL y reuniones asistidas |
+| Web / landing | disponible desde el primer anuncio | actualización al validar oferta/fricción | inicio y envío válido de formulario, preservando origen |
+| Email | por evento y permiso | se detiene al responder/completar/darse de baja | perfiles retomados, respuestas y reuniones |
+
+## 10. Organigrama y ownership vigentes
+
+```text
+NOMII — estrategia y sistema                         SINAXYS — operación humana
+├─ Comunicación: Natalia · 20 h/sem                  ├─ Validación PT-BR y voceros
+├─ Growth/medios: Edward · 16 h/sem                  ├─ Setter: selección humana y agenda
+├─ Datos/integración: Elías · 16 h/sem               ├─ Closer: propuesta, objeciones y cierre
+├─ Diseño gráfico · 20 h/sem                         ├─ Contrato, cobro y primer pago
+└─ Estrategia, copy, CRM/Cal, automatización,        └─ Onboarding operativo y continuidad
+   capacitación y medición
+```
+
+- **Capacidad base NOMII:** 72 h/semana para comunicación, growth, datos e integración y diseño.
+- **Referencia histórica Notion:** el cuadro inicial agregaba 20 h/semana de Setter y totalizaba 92 h/semana. Esta cifra debe mostrarse en una nota de transición, porque la ejecución Setter/Closer corresponde ahora a Sinaxys por decisión explícita de Sirius.
+- **Punto de control:** la inversión y el volumen de MQL sólo pueden escalar si Sinaxys confirma capacidad de Setter, Closer, tiempos de primera gestión y cupos de agenda.
+
+## 11. Checklist de transferencia a Claude
+
+- [ ] Diseñar el deck en español; distinguir visualmente cada muestra/guion PT-BR.
+- [ ] Incorporar el copy literal de la sección 8 en la slide correspondiente.
+- [ ] Usar los 43 assets versionados como guía visual, con referencia al manifest.
+- [ ] Mantener las cifras marcadas como referencia, escenario o dato pendiente de validar.
+- [ ] Representar los cuatro workflows de email con cantidad, cadencia, CTA, exclusión y salida.
+- [ ] Mantener la división NOMII / Sinaxys del organigrama vigente.
+- [ ] Dejar métricas, inversión, moneda, owners y fuentes editables.
